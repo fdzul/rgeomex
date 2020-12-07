@@ -107,6 +107,45 @@ ggplot2::ggplot()+
 
 <img src="man/figures/README-example-2.png" width="100%" />
 
+``` r
+blocks_acapulco <- rbind(rgeomex::blocks_ine20_mx_a,
+                         rgeomex::blocks_ine20_mx_b)[loc_acapulco,]
+#> although coordinates are longitude/latitude, st_intersects assumes that they are planar
+head(blocks_acapulco)
+#> Simple feature collection with 6 features and 8 fields
+#> geometry type:  POLYGON
+#> dimension:      XY
+#> bbox:           xmin: -99.95625 ymin: 16.8926 xmax: -99.95195 ymax: 16.89642
+#> geographic CRS: WGS 84
+#>          gid id entidad distrito municipio seccion localidad manzana
+#> 479902 46791  5      12        4         1       1         1      63
+#> 479903 46826 59      12        4         1       2         1      69
+#> 479904 46792  9      12        4         1       1         1      65
+#> 479905 46793  8      12        4         1       1         1      66
+#> 479906 46763  2      12        4         1       1         1       1
+#> 479907 46778 39      12        4         1       1         1      49
+#>                              geometry
+#> 479902 POLYGON ((-99.95295 16.8950...
+#> 479903 POLYGON ((-99.95236 16.8964...
+#> 479904 POLYGON ((-99.95318 16.8949...
+#> 479905 POLYGON ((-99.95338 16.8948...
+#> 479906 POLYGON ((-99.95425 16.8927...
+#> 479907 POLYGON ((-99.95553 16.8943...
+
+ggplot2::ggplot()+
+  ggplot2::geom_sf(data = blocks_acapulco,
+                   fill = "gray80",
+                   col = "white",
+                   lwd = 0.1) +
+  ggplot2::theme_void() +
+  ggplot2::geom_sf(data = loc_acapulco,
+                   fill = NA,
+                   col = "black",
+                   lwd = .5)
+```
+
+<img src="man/figures/README-example-3.png" width="100%" />
+
 ## Authors
 
 -   **Felipe Antonio Dzul Manzanilla** -**<https://github.com/fdzul>** -
