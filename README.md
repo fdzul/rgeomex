@@ -97,7 +97,8 @@ head(ageb_acapulco)
 ggplot2::ggplot()+
   ggplot2::geom_sf(data = ageb_acapulco,
                    fill = "gray80",
-                   col = "white") +
+                   col = "white",
+                   lwd = 0.1) +
   ggplot2::theme_void() +
   ggplot2::geom_sf(data = loc_acapulco,
                    fill = NA,
