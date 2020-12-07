@@ -13,15 +13,15 @@ knitr::opts_chunk$set(
 )
 ```
 
-# **geomex**
+# **rgeomex**
 
 [![Build Status](https://travis-ci.org/pages-themes/cayman.svg?branch=master)](https://travis-ci.org/pages-themes/cayman) [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.io/rb/jekyll-theme-cayman)[![Github All Releases](https://img.shields.io/github/downloads/fdzul/geomex/total.svg)]()
 
-**deneggs is a package developed in the department of prevention and control of diseases transmitted by vector of the [Secretary of Health of Veracruz](https://www.ssaver.gob.mx/) and with colaboration of the [CENAPRECE](https://www.gob.mx/salud/cenaprece)**
+**rgeomex is a package developed in the department of prevention and control of diseases transmitted by vector of the [Secretary of Health of Veracruz](https://www.ssaver.gob.mx/) and with colaboration of the [CENAPRECE](https://www.gob.mx/salud/cenaprece)**
 
 ## **overview**
 
-**geomex** is a package to provides spatial dataset (areal data) available and published homepage of [INE](https://pautas.ine.mx/transparencia/mapas/) and [INEGI](https://www.inegi.org.mx/temas/mg). These spatial dataset are useful for visualization and spatial analysis of diseases. The secondary objective of the package is to provide spatial bases for the calculation of dengue hotspots and their vector. the package have six spatial datasets.
+**rgeomex** is a package to provides spatial dataset (areal data) available and published homepage of [INE](https://pautas.ine.mx/transparencia/mapas/) and [INEGI](https://www.inegi.org.mx/temas/mg). These spatial dataset are useful for visualization and spatial analysis of diseases. The secondary objective of the package is to provide spatial bases for the calculation of dengue hotspots and their vector. the package have six spatial datasets.
 
   - **`blocks_ine10_mx`** A spatial dataset containing of polygon data of blocks from México (INE 2010).
   - **`blocks_ine20_mx`** A spatial dataset containing of polygon data of blocks from México (INE 2020).
@@ -37,21 +37,21 @@ knitr::opts_chunk$set(
 You can install the released version of geomex from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("geomex")
+install.packages("rgeomex")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("fdzul/geomex")
+devtools::install_github("fdzul/rgeomex")
 ```
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-#library(geomex)
+#library(rgeomex)
 ## basic example code
 1+1
 ```
@@ -87,7 +87,7 @@ The package was inspired by the need to contribute to making decisions in the de
 ## Getting help
 
 If you encounter a clear bug, please file a minimal reproducible example
-on [github](https://github.com/fdzul/geomex/issues). For questions
+on [github](https://github.com/fdzul/rgeomex/issues). For questions
 and other discussion, please feel free to contact me (felipe.dzul.m@gmail.com)
 
 -----
