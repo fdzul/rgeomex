@@ -49,13 +49,28 @@ devtools::install_github("fdzul/rgeomex")
 
 This is a basic example which shows you how to solve a common problem:
 
-```{r example}
-library(rgeomex)
+```{r example, dpi= 300}
+library(magrittr)
 library(sf)
-loc <-  rgeomex::loc_inegi19_mx %>%
+loc_acapulco <-  rgeomex::loc_inegi19_mx %>%
         dplyr::filter(NOMGEO %in% c(similiars::find_most_similar_string("Acapulco de Juarez", unique(NOMGEO))) &
                           AMBITO %in% c("Urbana"))
-plot(sf::st_geometry(loc))
+plot(sf::st_geometry(loc_acapulco))
+
+ageb_acapulco <- rgeomex::AGEB_inegi_2019_a[loc_acapulco,]
+head(ageb_acapulco)
+ggplot2::ggplot()+
+  ggplot2::geom_sf(data = ageb_acapulco,
+                   fill = "gray80",
+                   col = "white") +
+  ggplot2::theme_void() +
+  ggplot2::geom_sf(data = loc_acapulco,
+                   fill = NA,
+                   col = "black",
+                   lwd = .5)
+
+
+
 
 ```
 

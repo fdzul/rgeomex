@@ -59,16 +59,53 @@ devtools::install_github("fdzul/rgeomex")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-library(rgeomex)
+library(magrittr)
+#> Warning: package 'magrittr' was built under R version 4.0.3
 library(sf)
 #> Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1
-loc <-  rgeomex::loc_inegi19_mx %>%
+loc_acapulco <-  rgeomex::loc_inegi19_mx %>%
         dplyr::filter(NOMGEO %in% c(similiars::find_most_similar_string("Acapulco de Juarez", unique(NOMGEO))) &
                           AMBITO %in% c("Urbana"))
-plot(sf::st_geometry(loc))
+plot(sf::st_geometry(loc_acapulco))
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
+
+``` r
+ageb_acapulco <- rgeomex::AGEB_inegi_2019_a[loc_acapulco,]
+#> although coordinates are longitude/latitude, st_intersects assumes that they are planar
+head(ageb_acapulco)
+#> Simple feature collection with 6 features and 9 fields
+#> geometry type:  MULTIPOLYGON
+#> dimension:      XY
+#> bbox:           xmin: -99.95915 ymin: 16.81636 xmax: -99.84201 ymax: 16.89684
+#> geographic CRS: WGS 84
+#>       OBJECTID        CVEGEO CVE_ENT CVE_MUN CVE_LOC CVE_AGEB Ambito Shape_Leng
+#> 18715    18715 1200100010405      12     001    0001     0405 Urbana   5259.950
+#> 18716    18716 1200100012187      12     001    0001     2187 Urbana   3042.943
+#> 18717    18717 1200100010496      12     001    0001     0496 Urbana   5651.284
+#> 18718    18718 1200100010513      12     001    0001     0513 Urbana   9803.373
+#> 18719    18719 1200100010528      12     001    0001     0528 Urbana   8486.585
+#> 18720    18720 1200100012242      12     001    0001     2242 Urbana   2769.117
+#>       Shape_Area                       geometry
+#> 18715  1039839.0 MULTIPOLYGON (((-99.8626 16...
+#> 18716   200872.4 MULTIPOLYGON (((-99.95233 1...
+#> 18717  1199501.4 MULTIPOLYGON (((-99.91146 1...
+#> 18718  1447090.3 MULTIPOLYGON (((-99.84338 1...
+#> 18719  1549657.9 MULTIPOLYGON (((-99.85651 1...
+#> 18720   215333.1 MULTIPOLYGON (((-99.95207 1...
+ggplot2::ggplot()+
+  ggplot2::geom_sf(data = ageb_acapulco,
+                   fill = "gray80",
+                   col = "white") +
+  ggplot2::theme_void() +
+  ggplot2::geom_sf(data = loc_acapulco,
+                   fill = NA,
+                   col = "black",
+                   lwd = .5)
+```
+
+<img src="man/figures/README-example-2.png" width="100%" />
 
 ## Authors
 
