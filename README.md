@@ -14,8 +14,7 @@ Releases](https://img.shields.io/github/downloads/fdzul/geomex/total.svg)]()
 control of diseases transmitted by vector of the [Secretary of Health of
 Veracruz](https://www.ssaver.gob.mx/) with colaboration of the
 [CENAPRECE](https://www.gob.mx/salud/cenaprece) and
-[INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published)
-**
+[INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published)**
 
 ## **overview**
 
@@ -28,8 +27,6 @@ objective of the package is to provide spatial bases for the calculation
 of dengue hotspots and their vector. the package have six spatial
 datasets.
 
--   **`blocks_ine10_mx`** A spatial dataset containing of polygon data
-    of blocks from México (INE 2010).
 -   **`blocks_ine20_mx`** A spatial dataset containing of polygon data
     of blocks from México (INE 2020).
 -   **`localities_inegi19_mx`** A spatial dataset containing of polygon
@@ -62,10 +59,36 @@ devtools::install_github("fdzul/rgeomex")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-#library(rgeomex)
-## basic example code
-1+1
-#> [1] 2
+library(rgeomex)
+library(sf)
+#> Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1
+head(rgeomex::loc_inegi19_mx)
+#> Simple feature collection with 6 features and 6 fields
+#> geometry type:  MULTIPOLYGON
+#> dimension:      XY
+#> bbox:           xmin: -102.3605 ymin: 21.78448 xmax: -102.1749 ymax: 22.00303
+#> geographic CRS: WGS 84
+#>      CVEGEO CVE_ENT CVE_MUN CVE_LOC
+#> 1 010010001      01     001    0001
+#> 2 010010239      01     001    0239
+#> 3 010010293      01     001    0293
+#> 4 010010357      01     001    0357
+#> 5 010010479      01     001    0479
+#> 6 010011025      01     001    1025
+#>                                              NOMGEO AMBITO
+#> 1                                    Aguascalientes Urbana
+#> 2 General José María Morelos y Pavón (Cañada Honda) Urbana
+#> 3                             Norias de Ojocaliente Urbana
+#> 4                             Norias del Paso Hondo Urbana
+#> 5         Villa Licenciado Jesús Terán (Calvillito) Urbana
+#> 6                                           Pocitos Urbana
+#>                         geometry
+#> 1 MULTIPOLYGON (((-102.2628 2...
+#> 2 MULTIPOLYGON (((-102.1977 2...
+#> 3 MULTIPOLYGON (((-102.212 21...
+#> 4 MULTIPOLYGON (((-102.2089 2...
+#> 5 MULTIPOLYGON (((-102.1869 2...
+#> 6 MULTIPOLYGON (((-102.3379 2...
 ```
 
 ## Authors
@@ -76,15 +99,15 @@ This is a basic example which shows you how to solve a common problem:
     1.  [denhotspots](https://github.com/fdzul/denhotspots).
     2.  [boldenr](https://github.com/fdzul/boldenr).
     3.  [dendata](https://github.com/fdzul/dendata).
-    4.  [deneggs](https://github.com/fdzul/dendata).
+    4.  [deneggs](https://github.com/fdzul/deneggs).
 
--   **Fabian Correa Morales**
+-   **Fabián Correa Morales**
 
 -   **Luis Hernández Herrera**
 
 -   **Arturo Baez-Hernández**
 
--   **Evaristo Morales Rios**
+-   **Evaristo Morales Ríos**
 
 -   **Heron Huerta**
 

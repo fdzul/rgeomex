@@ -50,9 +50,8 @@ devtools::install_github("fdzul/rgeomex")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-#library(rgeomex)
-## basic example code
-1+1
+library(rgeomex)
+head(rgeomex::loc_inegi19_mx)
 ```
 
 ## Authors
@@ -62,12 +61,12 @@ This is a basic example which shows you how to solve a common problem:
   1) [denhotspots](https://github.com/fdzul/denhotspots). 
   2) [boldenr](https://github.com/fdzul/boldenr). 
   3) [dendata](https://github.com/fdzul/dendata).
-  4) [deneggs](https://github.com/fdzul/dendata).
+  4) [deneggs](https://github.com/fdzul/deneggs).
 
-* **Fabian Correa Morales**
+* **Fabián Correa Morales**
 * **Luis Hernández Herrera**
 * **Arturo Baez-Hernández**
-* **Evaristo Morales Rios**
+* **Evaristo Morales Ríos**
 * **Heron Huerta**
 
 
