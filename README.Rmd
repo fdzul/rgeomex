@@ -51,6 +51,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(rgeomex)
+library(sf)
 head(rgeomex::loc_inegi19_mx)
 ```
 
