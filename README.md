@@ -62,34 +62,13 @@ This is a basic example which shows you how to solve a common problem:
 library(rgeomex)
 library(sf)
 #> Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1
-head(rgeomex::loc_inegi19_mx)
-#> Simple feature collection with 6 features and 6 fields
-#> geometry type:  MULTIPOLYGON
-#> dimension:      XY
-#> bbox:           xmin: -102.3605 ymin: 21.78448 xmax: -102.1749 ymax: 22.00303
-#> geographic CRS: WGS 84
-#>      CVEGEO CVE_ENT CVE_MUN CVE_LOC
-#> 1 010010001      01     001    0001
-#> 2 010010239      01     001    0239
-#> 3 010010293      01     001    0293
-#> 4 010010357      01     001    0357
-#> 5 010010479      01     001    0479
-#> 6 010011025      01     001    1025
-#>                                              NOMGEO AMBITO
-#> 1                                    Aguascalientes Urbana
-#> 2 General José María Morelos y Pavón (Cañada Honda) Urbana
-#> 3                             Norias de Ojocaliente Urbana
-#> 4                             Norias del Paso Hondo Urbana
-#> 5         Villa Licenciado Jesús Terán (Calvillito) Urbana
-#> 6                                           Pocitos Urbana
-#>                         geometry
-#> 1 MULTIPOLYGON (((-102.2628 2...
-#> 2 MULTIPOLYGON (((-102.1977 2...
-#> 3 MULTIPOLYGON (((-102.212 21...
-#> 4 MULTIPOLYGON (((-102.2089 2...
-#> 5 MULTIPOLYGON (((-102.1869 2...
-#> 6 MULTIPOLYGON (((-102.3379 2...
+loc <-  rgeomex::loc_inegi19_mx %>%
+        dplyr::filter(NOMGEO %in% c(similiars::find_most_similar_string("Acapulco de Juarez", unique(NOMGEO))) &
+                          AMBITO %in% c("Urbana"))
+plot(sf::st_geometry(loc))
 ```
+
+<img src="man/figures/README-example-1.png" width="100%" />
 
 ## Authors
 
