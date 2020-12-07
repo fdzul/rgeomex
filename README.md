@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# **geomex**
+# **rgeomex**
 
 [![Build
 Status](https://travis-ci.org/pages-themes/cayman.svg?branch=master)](https://travis-ci.org/pages-themes/cayman)
@@ -10,14 +10,16 @@ Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.i
 All
 Releases](https://img.shields.io/github/downloads/fdzul/geomex/total.svg)]()
 
-**deneggs is a package developed in the department of prevention and
+**rgeomex is a package developed in the department of prevention and
 control of diseases transmitted by vector of the [Secretary of Health of
-Veracruz](https://www.ssaver.gob.mx/) and with colaboration of the
-[CENAPRECE](https://www.gob.mx/salud/cenaprece)**
+Veracruz](https://www.ssaver.gob.mx/) with colaboration of the
+[CENAPRECE](https://www.gob.mx/salud/cenaprece) and
+[INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published)
+**
 
 ## **overview**
 
-**geomex** is a package to provides spatial dataset (areal data)
+**rgeomex** is a package to provides spatial dataset (areal data)
 available and published homepage of
 [INE](https://pautas.ine.mx/transparencia/mapas/) and
 [INEGI](https://www.inegi.org.mx/temas/mg). These spatial dataset are
@@ -45,14 +47,14 @@ You can install the released version of geomex from
 [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("geomex")
+install.packages("rgeomex")
 ```
 
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("fdzul/geomex")
+devtools::install_github("fdzul/rgeomex")
 ```
 
 ## Example
@@ -60,7 +62,7 @@ devtools::install_github("fdzul/geomex")
 This is a basic example which shows you how to solve a common problem:
 
 ``` r
-#library(geomex)
+#library(rgeomex)
 ## basic example code
 1+1
 #> [1] 2
@@ -105,7 +107,7 @@ by the program.
 ## Getting help
 
 If you encounter a clear bug, please file a minimal reproducible example
-on [github](https://github.com/fdzul/geomex/issues). For questions and
+on [github](https://github.com/fdzul/rgeomex/issues). For questions and
 other discussion, please feel free to contact me
 (<felipe.dzul.m@gmail.com>)
 
