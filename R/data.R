@@ -16,7 +16,7 @@
 #'   ...
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
-#' @details This datasets were publiched in october 2020.
+#' @details This datasets were published in october 2020.
 "blocks_ine20_mx_a"
 
 #' Polygons of blocks from México of the National Electoral Institute 2020
@@ -37,7 +37,7 @@
 #'   ...
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
-#' @details This datasets were publiched in october 2020.
+#' @details This datasets were published in october 2020.
 "blocks_ine20_mx_b"
 
 #' Polygons of blocks from México of the National Electoral Institute 2020
@@ -58,7 +58,7 @@
 #'   ...
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
-#' @details This datasets were publiched in october 2020.
+#' @details This datasets were published in october 2020.
 "blocks_ine20_mx_c"
 
 #' Polygons of blocks from México of the National Electoral Institute 2020
@@ -79,7 +79,7 @@
 #'   ...
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
-#' @details This datasets were publiched in october 2020.
+#' @details This datasets were published in october 2020.
 "blocks_ine20_mx_d"
 
 #' Polygons of blocks from México of the National Electoral Institute 2020
@@ -100,7 +100,7 @@
 #'   ...
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
-#' @details This datasets were publiched in october 2020.
+#' @details This datasets were published in october 2020.
 "blocks_ine20_mx_e"
 
 #' Polygons of AGEBs from México of the National Institute of Geography and Statistics 2019
