@@ -8,7 +8,7 @@ Authors@R: person(given = "Felipe Antonio", family = "Dzul Manzanilla",
                         role = c("aut", "cre"),
                         email = "felipe.dzul.m@gmail.com",
                         comment = c(ORCID = "https://orcid.org/0000-0002-2085-9141"))
-Description: the rgeomex package provides spatial databases (areal data) available and published homepage of INE and INEGI
+Description: the rgeomex package provides spatial dataset (areal data) available and published homepage of INE and INEGI.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
