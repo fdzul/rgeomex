@@ -1,6 +1,6 @@
 Package: rgeomex
 Type: Package
-Title: The rgeomex provides the polygon data of INE 2010, INEGI 2019 and INE 2020
+Title: The rgeomex provides the polygon data of INEGI 2019 and INE 2020
 Version: 0.1.0
 Author: Felipe Antonio Dzul Manzanilla
 Maintainer: The package maintainer <felipe.dzul.m@gmail.com>
