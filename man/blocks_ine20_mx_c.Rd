@@ -29,6 +29,6 @@ blocks_ine20_mx_c
 A spatial dataset containing of polygon data of blocks from México
 }
 \details{
-This datasets were publiched in october 2020.
+This datasets were published in october 2020.
 }
 \keyword{datasets}
