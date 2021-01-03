@@ -4,15 +4,15 @@
 # **rgeomex**
 
 [![Build
-Status](https://travis-ci.org/pages-themes/cayman.svg?branch=master)](https://travis-ci.org/pages-themes/cayman)
+Status](https://travis-ci.org/fdzul/rgeomex.svg?branch=master)](https://travis-ci.org/fdzul/rgeomex)
 [![Gem
-Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.io/rb/jekyll-theme-cayman)[![Github
-All
-Releases](https://img.shields.io/github/downloads/fdzul/geomex/total.svg)]()
+Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.io/rb/jekyll-theme-cayman)
+[![Github All
+Releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total.svg)]()
 
 **rgeomex is a package developed in the department of prevention and
 control of diseases transmitted by vector of the [Secretary of Health of
-Veracruz](https://www.ssaver.gob.mx/) with colaboration of the
+Veracruz](https://www.ssaver.gob.mx/) with collaboration of the
 [CENAPRECE](https://www.gob.mx/salud/cenaprece) and
 [INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published)**
 
@@ -60,7 +60,6 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(magrittr)
-#> Warning: package 'magrittr' was built under R version 4.0.3
 library(sf)
 #> Linking to GEOS 3.8.0, GDAL 3.0.4, PROJ 6.3.1
 loc_acapulco <-  rgeomex::loc_inegi19_mx %>%
