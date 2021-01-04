@@ -14,8 +14,7 @@ knitr::opts_chunk$set(
 ```
 
 # **rgeomex**
-
-[![Build Status](https://travis-ci.com/fdzul/rgeomex.svg?branch=master)](https://travis-ci.com/fdzul/rgeomex) 
+[![Build Status](https://travis-ci.com/fdzul/rgeomex.svg?branch=main)](https://travis-ci.com/fdzul/rgeomex) 
 [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.io/rb/jekyll-theme-cayman)
 [![Github All Releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total.svg)]()
 
