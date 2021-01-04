@@ -8,8 +8,8 @@ Status](https://travis-ci.com/fdzul/rgeomex.svg?branch=main)](https://travis-ci.
 [![HitCount](http://hits.dwyl.com/fdzul/rgeomex.svg)](http://hits.dwyl.com/fdzul/rgeomex)
 ![GitHub all
 releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total)
-[![Coverage
-Status](https://img.shields.io/codecov/c/github/fdzul/rgeomex/master.svg)](https://codecov.io/github/fdzul/rgeomex?branch=master)
+[![Codecov test
+coverage](https://codecov.io/gh/fdzul/rgeomex/branch/master/graph/badge.svg)](https://codecov.io/gh/fdzul/rgeomex?branch=master)
 
 **rgeomex is a package developed in the department of prevention and
 control of diseases transmitted by vector of the [Secretary of Health of
