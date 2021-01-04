@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 [![Build Status](https://travis-ci.com/fdzul/rgeomex.svg?branch=main)](https://travis-ci.com/fdzul/rgeomex) 
 [![Gem Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.io/rb/jekyll-theme-cayman)
 [![Github All Releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total.svg)]()
+[![HitCount](http://hits.dwyl.com/fdzul/rgeomex.svg)](http://hits.dwyl.com/fdzul/rgeomex)
 
 **rgeomex is a package developed in the department of prevention and control of diseases transmitted by vector of the [Secretary of Health of Veracruz](https://www.ssaver.gob.mx/) with collaboration of the [CENAPRECE](https://www.gob.mx/salud/cenaprece) and [INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published)** 
 

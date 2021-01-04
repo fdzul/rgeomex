@@ -9,6 +9,7 @@ Status](https://travis-ci.com/fdzul/rgeomex.svg?branch=main)](https://travis-ci.
 Version](https://badge.fury.io/rb/jekyll-theme-cayman.svg)](https://badge.fury.io/rb/jekyll-theme-cayman)
 [![Github All
 Releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total.svg)]()
+[![HitCount](http://hits.dwyl.com/fdzul/rgeomex.svg)](http://hits.dwyl.com/fdzul/rgeomex)
 
 **rgeomex is a package developed in the department of prevention and
 control of diseases transmitted by vector of the [Secretary of Health of
