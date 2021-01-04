@@ -18,3 +18,5 @@ Depends:
 Imports: 
     lifecycle
 RdMacros: lifecycle
+Suggests: 
+    covr
