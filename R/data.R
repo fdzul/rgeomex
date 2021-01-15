@@ -197,3 +197,20 @@
 #' @source \url{https://www.inegi.org.mx/temas/mg/#Descargas}
 #' @details This datasets were published in september 2019.
 "loc_inegi19_mx"
+
+#' Blocks centroids from México of the National Electoral Institute 2020
+#
+#' A dataset containing of centroid data of blocks from México
+#' @docType data
+#' @usage data(blocks_ine20_mx_centroid); rgeomex::blocks_ine20_mx_centroid
+#'
+#' @format A dataframe with 1556070 rows and 4 variables:
+#' \describe{
+#'   \item{cve_ent}{the numeric key state}
+#'   \item{cve_geo}{is the numeric key for each block centroid.The key included the key of state, municipality, locality, sector and blocks.}
+#'   \item{x}{is the longitud}
+#'   \item{y}{is the latitud}
+#'   ...
+#' }
+#' @source [INE](https://pautas.ine.mx/transparencia/mapas/)
+"blocks_ine20_mx_centroid"
