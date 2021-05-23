@@ -14,7 +14,7 @@ extract_ageb <- function(locality, cve_geo){
 
     x <- rgeomex::loc_inegi19_mx %>%
         dplyr::filter(NOMGEO %in%
-                          c(similiars::find_most_similar_string(c(locality),
+                          c(rgeomex::find_most_similar_string(c(locality),
                                                                 unique(NOMGEO))) &
                           CVE_ENT %in% c(cve_geo))
     y <- rbind(rgeomex::AGEB_inegi_2019_a,
