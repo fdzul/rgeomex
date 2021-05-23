@@ -15,7 +15,6 @@
 #'
 #' @examples
 #'
-#' find_most_similar_string(c("battman", "Irn Man"), superheroes)
 #'
 #' @return a character vector
 #'
