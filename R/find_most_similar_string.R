@@ -13,13 +13,26 @@
 #'
 #' @details Uses the generalized Levenshtein distance. For more information type \code{?utils::adist} in the console. the original source is https://github.com/davidsjoberg/similiars/blob/master/R/similiars.R
 #'
-#' @examples
+#' @examples 1+1
 #'
 #'
 #' @return a character vector
 #'
 #' @export
 find_most_similar_string <- function(.s, .t, max_dist = Inf, verbose = TRUE, ignore_case = TRUE, feeling_lucky = FALSE, ...) {
+
+    find_string_distance <- function(.s, .t, ignore_case = TRUE, ...) {
+        if(any(!is.character(.t), !is.character(.s))) stop("'.s' and '.t' need to be character vectors")
+
+        purrr::map(.s, function(.e) {
+            .d <- utils::adist(.t, .e, ignore.case = ignore_case)
+            dplyr::tibble(input_string = .e,
+                          string = .t,
+                          string_distance = .d[, 1]) %>%
+                dplyr::arrange(.data$string_distance)
+        }) %>%
+            purrr::set_names(.s)
+    }
     if(any(!is.character(.t), !is.character(.s))) stop("'.s' and '.t' need to be character vectors")
     .dfs <- find_string_distance(.s, .t, ignore_case = ignore_case)
     .dfs <- purrr::map(.dfs, function(.h) {.h %>% dplyr::filter(.data$string_distance <= max_dist)})

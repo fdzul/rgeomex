@@ -201,9 +201,6 @@
 #' Blocks centroids from México of the National Electoral Institute 2020
 #
 #' A dataset containing of centroid data of blocks from México
-#' @docType data
-#' @usage data(blocks_ine20_mx_centroid); rgeomex::blocks_ine20_mx_centroid
-#'
 #' @format A dataframe with 1556070 rows and 4 variables:
 #' \describe{
 #'   \item{cve_ent}{the numeric key state}
