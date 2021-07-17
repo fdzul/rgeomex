@@ -40,7 +40,7 @@ Returns a vector of the same length as input vector '.s'.
 Uses the generalized Levenshtein distance. For more information type \code{?utils::adist} in the console. the original source is https://github.com/davidsjoberg/similiars/blob/master/R/similiars.R
 }
 \examples{
+1+1
 
-find_most_similar_string(c("battman", "Irn Man"), superheroes)
 
 }

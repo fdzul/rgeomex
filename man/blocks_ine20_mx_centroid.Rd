@@ -10,8 +10,8 @@ A dataframe with 1556070 rows and 4 variables:
 \describe{
   \item{cve_ent}{the numeric key state}
   \item{cve_geo}{is the numeric key for each block centroid.The key included the key of state, municipality, locality, sector and blocks.}
-  \item{x}{is the longitud}
-  \item{y}{is the latitud}
+  \item{x}{is the longitude}
+  \item{y}{is the latitude}
   ...
 }
 }
@@ -19,7 +19,7 @@ A dataframe with 1556070 rows and 4 variables:
 [INE](https://pautas.ine.mx/transparencia/mapas/)
 }
 \usage{
-data(blocks_ine20_mx_centroid); rgeomex::blocks_ine20_mx_centroid
+blocks_ine20_mx_centroid
 }
 \description{
 Blocks centroids from México of the National Electoral Institute 2020
