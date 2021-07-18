@@ -13,12 +13,14 @@
 extract_ageb <- function(locality, cve_geo){
 
     x <- rgeomex::loc_inegi19_mx %>%
+        sf::st_make_valid() %>%
         dplyr::filter(NOMGEO %in%
                           c(rgeomex::find_most_similar_string(c(locality),
                                                                 unique(NOMGEO))) &
                           CVE_ENT %in% c(cve_geo))
     y <- rbind(rgeomex::AGEB_inegi_2019_a,
-               rgeomex::AGEB_inegi_2019_b)
+               rgeomex::AGEB_inegi_2019_b) %>%
+        sf::st_make_valid()
 
     xy <- y[x,]
 
