@@ -28,18 +28,18 @@ find_most_similar_string <- function(.s, .t, max_dist = Inf, verbose = TRUE, ign
             .d <- utils::adist(.t, .e, ignore.case = ignore_case)
             dplyr::tibble(input_string = .e,
                           string = .t,
-                          string_distance = .d[, 1]) %>%
+                          string_distance = .d[, 1]) |>
                 dplyr::arrange(.data$string_distance)
-        }) %>%
+        }) |>
             purrr::set_names(.s)
     }
     if(any(!is.character(.t), !is.character(.s))) stop("'.s' and '.t' need to be character vectors")
     .dfs <- find_string_distance(.s, .t, ignore_case = ignore_case)
-    .dfs <- purrr::map(.dfs, function(.h) {.h %>% dplyr::filter(.data$string_distance <= max_dist)})
+    .dfs <- purrr::map(.dfs, function(.h) {.h |> dplyr::filter(.data$string_distance <= max_dist)})
 
     out <- purrr::map_chr(.dfs, ~{
         if(is.na(.x$input_string[1])) {return(NA_character_)}
-        .x <- .x %>% dplyr::filter(string_distance == min(string_distance))
+        .x <- .x |> dplyr::filter(string_distance == min(string_distance))
 
         if( nrow(.x) > 1){
             if(feeling_lucky){
@@ -73,7 +73,7 @@ find_most_similar_string <- function(.s, .t, max_dist = Inf, verbose = TRUE, ign
             }
             return(NA_character_)
         }
-        .x %>% dplyr::pull(string)
+        .x |> dplyr::pull(string)
     })
-    out %>% as.character()
+    out |> as.character()
 }
