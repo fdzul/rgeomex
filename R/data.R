@@ -1,6 +1,6 @@
-#' Polygons of blocks from México of the National Electoral Institute 2020
+#' Polygons of blocks from Mexico of the National Electoral Institute 2020
 #'
-#' A spatial dataset containing of polygon data of blocks from México
+#' A spatial dataset containing of polygon data of blocks from Mexico
 #'
 #' @format A sf object with 2278337 rows and 19 variables:
 #' \describe{
