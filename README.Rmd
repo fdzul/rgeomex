@@ -55,11 +55,14 @@ This is a basic example which shows how to solve a common problem:
 library(magrittr)
 library(sf)
 loc_acapulco <-  rgeomex::loc_inegi19_mx %>%
+    sf::st_make_valid() |>
         dplyr::filter(NOMGEO %in% c(similiars::find_most_similar_string("Acapulco de Juarez", unique(NOMGEO))) &
                           AMBITO %in% c("Urbana"))
 plot(sf::st_geometry(loc_acapulco))
 
-ageb_acapulco <- rgeomex::AGEB_inegi_2019_a[loc_acapulco,]
+y <- rgeomex::AGEB_inegi_2019_a |>
+    sf::st_make_valid()
+ageb_acapulco <- y[loc_acapulco,]
 head(ageb_acapulco)
 ggplot2::ggplot()+
   ggplot2::geom_sf(data = ageb_acapulco,
@@ -73,7 +76,10 @@ ggplot2::ggplot()+
                    lwd = .5)
 
 blocks_acapulco <- rbind(rgeomex::blocks_ine20_mx_a,
-                         rgeomex::blocks_ine20_mx_b)[loc_acapulco,]
+                         rgeomex::blocks_ine20_mx_b) |>
+    sf::st_make_valid()
+
+blocks_acapulco <- blocks_acapulco[loc_acapulco,]
 head(blocks_acapulco)
 
 ggplot2::ggplot()+
