@@ -212,3 +212,75 @@
 #' }
 #' @source [INE](https://pautas.ine.mx/transparencia/mapas/)
 "blocks_ine20_mx_centroid"
+
+#' Polygons of sectores from México of the National Electoral Institute 2020
+#'
+#' A spatial dataset containing of polygon data of sectores from México
+#'
+#' @format A sf object with 17833 rows and 7 variables:
+#' \describe{
+#'   \item{gid}{the ids.}
+#'   \item{id}{the ids.}
+#'   \item{entidad}{is the numeric key of state.}
+#'   \item{distrito}{is the numeric key of federal district.}
+#'   \item{distrito_l}{is the numeric key of federal district.}
+#'   \item{municipio}{is the numeric key to the Municipality}
+#'   \item{seccion}{is the numeric key to the Sectors}
+#'   \item{tipo}{is numeric the key of tipo}
+#'   \item{geometry1_}{is the simple feature}
+#'   \item{ln}{}
+#'   \item{pad}{}
+#'   \item{geometry}{simple feature.}
+#'   ...
+#' }
+#' @source \url{https://pautas.ine.mx/transparencia/mapas/}
+#' @details This datasets were published in october 2023.
+"sectores_ine20_mx_a"
+
+#' Polygons of sectores from México of the National Electoral Institute 2020
+#'
+#' A spatial dataset containing of polygon data of sectores from México
+#'
+#' @format A sf object with 27428 rows and 7 variables:
+#' \describe{
+#'   \item{gid}{the ids.}
+#'   \item{id}{the ids.}
+#'   \item{entidad}{is the numeric key of state.}
+#'   \item{distrito}{is the numeric key of federal district.}
+#'   \item{distrito_l}{is the numeric key of federal district.}
+#'   \item{municipio}{is the numeric key to the Municipality}
+#'   \item{seccion}{is the numeric key to the Sectors}
+#'   \item{tipo}{is numeric the key of tipo}
+#'   \item{geometry1_}{is the simple feature}
+#'   \item{ln}{}
+#'   \item{pad}{}
+#'   \item{geometry}{simple feature.}
+#'   ...
+#' }
+#' @source \url{https://pautas.ine.mx/transparencia/mapas/}
+#' @details This datasets were published in october 2023.
+"sectores_ine20_mx_b"
+
+#' Polygons of sectores from México of the National Electoral Institute 2020
+#'
+#' A spatial dataset containing of polygon data of sectores from México
+#'
+#' @format A sf object with 23175 rows and 11 variables:
+#' \describe{
+#'   \item{gid}{the ids.}
+#'   \item{id}{the ids.}
+#'   \item{entidad}{is the numeric key of state.}
+#'   \item{distrito}{is the numeric key of federal district.}
+#'   \item{distrito_l}{is the numeric key of federal district.}
+#'   \item{municipio}{is the numeric key to the Municipality}
+#'   \item{seccion}{is the numeric key to the Sectors}
+#'   \item{tipo}{is numeric the key of tipo}
+#'   \item{geometry1_}{is the simple feature}
+#'   \item{ln}{}
+#'   \item{pad}{}
+#'   \item{geometry}{simple feature.}
+#'   ...
+#' }
+#' @source \url{https://pautas.ine.mx/transparencia/mapas/}
+#' @details This datasets were published in october 2023.
+"sectores_ine20_mx_c"
