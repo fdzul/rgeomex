@@ -19,7 +19,9 @@ Imports:
     purrr,
     lifecycle,
     sf,
-    dplyr
+    dplyr,
+    ggplot2,
+    mapview
 RdMacros: lifecycle
 Suggests: 
     covr,
