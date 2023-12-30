@@ -11,35 +11,46 @@ releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total)
 [![Codecov test
 coverage](https://codecov.io/gh/fdzul/rgeomex/branch/master/graph/badge.svg)](https://codecov.io/gh/fdzul/rgeomex?branch=master)
 
-**rgeomex is a package developed in the department of prevention and
-control of diseases transmitted by vector of the
-[CENAPRECE](https://www.gob.mx/salud/cenaprece) with collaboration of
-the
-[INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published)**
+**rgeomex** is a package developed in the
+[CENAPRECE](https://www.gob.mx/salud/cenaprece) dengue prevention and
+control program in collaboration with
+[INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published),
+and the states of Veracruz and Yucatan.
 
 ## **overview**
 
-**rgeomex** is a package to provide spatial dataset (areal data)
-available and published homepage of
-[INE](https://pautas.ine.mx/transparencia/mapas/) and
-[INEGI](https://www.inegi.org.mx/temas/mg). These spatial dataset are
-useful for visualization and spatial analysis of diseases. The secondary
-objective of the package is to provide spatial bases for the calculation
-of dengue hotspots and their vectors. The package has six spatial
-datasets.
+**rgeomex**. Geographic data and geographical datasets from the
+[INEGI](https://www.inegi.org.mx/temas/mg) and
+[INE](https://pautas.ine.mx/transparencia/mapas/) are available in the R
+package **rgeomex**. Geographical data at various resolutions (states,
+municipalities, localities, agebs, blocks, sectors, and neighborhoods)
+constitute the majority of the package’s content.
+
+**rgeomex** constitutes a transversal package of the **ETVerse** and
+**IVAVerse** initiatives. **rgeomex**, together with denepikit,
+denhotspots, deneggs, and dencontrol packages, constitute a universe of
+packages that make up the dengueverse of the dengue prevention and
+control program in Mexico.
+
+The package has six spatial datasets.
 
 - **`blocks_ine20_mx`** spatial dataset containing polygon data of
   blocks from Mexico (INE 2020).
-- **`localities_inegi19_mx`** spatial dataset containing polygon data of
+- **`loc_inegi19_mx`** spatial dataset containing polygon data of
   localities from Mexico (INEGI 2019).
-- **`AGEB_inegi19_mx`** spatial dataset containing polygon data of AGEBs
-  from Mexico (INEGI 2019).
+- **`AGEB_inegi_2019_mx`** spatial dataset containing polygon data of
+  AGEBs (Area Geostadística Basica) from Mexico (INEGI 2019).
 - **`AGEE_inegi19_mx`** spatial dataset containing polygon data of AGEE
-  from Mexico (INEGI 2019).
+  (Area Geostadística Estatal) from Mexico (INEGI 2019).
 - **`AGEM_inegi19_mx`** spatial dataset containing polygon data of AGEM
-  from Mexico (INEGI 2019).
+  (Area Geostadística Municipal) from Mexico (INEGI 2019).
+- **`sectores_ine20_mx`** spatial dataset containing polygon data
+  sectores INE from Mexico.
 
-## Installation
+This package is currently available only in R, and we hope that it will
+soon become available in Python.
+
+## Installation R
 
 You can install the released version of rgeomex from
 [CRAN](https://CRAN.R-project.org) with:
@@ -85,6 +96,11 @@ pak::pkg_install("fdzul/rgeomex")
 See also the list of
 [contributors](https://github.com/fdzul/geomex/contributors) who
 participated in this project.
+
+## Credits
+
+Original shapefiles are created by official government institutions
+(INEGI & INE).
 
 ## License
 
