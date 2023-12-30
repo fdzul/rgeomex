@@ -51,8 +51,13 @@ install.packages("rgeomex")
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
 devtools::install_github("fdzul/rgeomex")
+```
+
+or
+
+``` r
+pak::pkg_install("fdzul/rgeomex")
 ```
 
 ## Authors
