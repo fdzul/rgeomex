@@ -5,7 +5,7 @@
 
 [![Build
 Status](https://travis-ci.com/fdzul/rgeomex.svg?branch=main)](https://travis-ci.com/fdzul/rgeomex)
-[![HitCount](http://hits.dwyl.com/fdzul/rgeomex.svg)](http://hits.dwyl.com/fdzul/rgeomex)
+[![HitCount](https://hits.dwyl.com/fdzul/fdzul/rgeomex.svg?style=flat-square)](http://hits.dwyl.com/fdzul/fdzul/rgeomex)
 ![GitHub all
 releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total)
 [![Codecov test
