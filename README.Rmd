@@ -26,7 +26,7 @@ knitr::opts_chunk$set(
 
 **rgeomex**. Geographic data and geographical datasets from the [INEGI](https://www.inegi.org.mx/temas/mg) and [INE](https://pautas.ine.mx/transparencia/mapas/) are available in the R package **rgeomex**. Geographical data at various resolutions (states, municipalities, localities, agebs, blocks, sectors, and neighborhoods) constitute  the majority of the package's content.
 
-**rgeomex** constitutes a transversal package of the **ETVerse** and **IVAVerse** initiatives. **rgeomex**, together with  denepikit, denhotspots, deneggs, and dencontrol packages, constitute a universe of packages that make up the dengueverse of the dengue prevention and control program in Mexico.
+**rgeomex** constitutes a transversal package of the **ETVerse** and **IVAverse** initiatives. **rgeomex**, together with  denepikit, denhotspots, deneggs, and dencontrol packages, constitute a universe of packages that make up the dengueverse of the dengue prevention and control program in Mexico.
 
 The package has six spatial datasets.
 

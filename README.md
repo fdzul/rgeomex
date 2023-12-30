@@ -27,7 +27,7 @@ municipalities, localities, agebs, blocks, sectors, and neighborhoods)
 constitute the majority of the package’s content.
 
 **rgeomex** constitutes a transversal package of the **ETVerse** and
-**IVAVerse** initiatives. **rgeomex**, together with denepikit,
+**IVAverse** initiatives. **rgeomex**, together with denepikit,
 denhotspots, deneggs, and dencontrol packages, constitute a universe of
 packages that make up the dengueverse of the dengue prevention and
 control program in Mexico.
