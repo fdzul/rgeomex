@@ -23,5 +23,8 @@ Imports:
 RdMacros: lifecycle
 Suggests: 
     covr,
+    knitr,
+    rmarkdown,
     testthat
 URL: https://fdzul.github.io/rgeomex/
+VignetteBuilder: knitr
