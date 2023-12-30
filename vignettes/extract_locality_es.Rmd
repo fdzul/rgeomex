@@ -76,6 +76,3 @@ ggplot2::ggplot()+
                    col = "black",
                    lwd = .5)
 ```
-
-
-
