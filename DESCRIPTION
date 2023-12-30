@@ -24,3 +24,4 @@ RdMacros: lifecycle
 Suggests: 
     covr,
     testthat
+URL: https://fdzul.github.io/rgeomex/
