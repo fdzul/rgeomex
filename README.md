@@ -12,9 +12,9 @@ releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total)
 coverage](https://codecov.io/gh/fdzul/rgeomex/branch/master/graph/badge.svg)](https://codecov.io/gh/fdzul/rgeomex?branch=master)
 
 **rgeomex is a package developed in the department of prevention and
-control of diseases transmitted by vector of the [Secretary of Health of
-Veracruz](https://www.ssaver.gob.mx/) with collaboration of the
-[CENAPRECE](https://www.gob.mx/salud/cenaprece) and
+control of diseases transmitted by vector of the
+[CENAPRECE](https://www.gob.mx/salud/cenaprece) with collaboration of
+the
 [INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published)**
 
 ## **overview**
