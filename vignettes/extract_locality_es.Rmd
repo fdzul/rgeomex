@@ -24,7 +24,7 @@ Para extraer una localidad de interes se usa la funcion extract_locality o la fu
 
 Para extraer una localidad con la función extract_locality, se usan dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality).
 
-```{r loc_acapulco1, dpi = 200}
+```{r loc_acapulco1}
 acapulco <- rgeomex::extract_locality(cve_edo = "12",
                                       locality = "Acapulco de Juárez")
 
@@ -34,7 +34,7 @@ mapview::mapview(acapulco, legend = FALSE)
 
 Para extraer una localidad con la función extract_ageb, se usan dos argumentos, uno para definir la clave del estado (cve_geo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality).
 
-```{r loc_acapulco2, dpi = 200}
+```{r loc_acapulco2}
 acapulco_ageb <- rgeomex::extract_ageb(cve_geo = "12",
                                       locality = "Acapulco de Juárez")
 
@@ -43,7 +43,7 @@ mapview::mapview(acapulco_ageb$locality, legend = FALSE)
 
 Ambas funciones se pueden usar para todas las localidades urbanas de México, excepto la Ciudad de México para esta se usa otro código para extraer toda la localidad.
 
-```{r loc_cdmx, dpi = 200}
+```{r loc_cdmx}
 rgeomex::loc_inegi19_mx |>
     dplyr::filter(CVE_ENT == "09") |>
 mapview::mapview(legend = FALSE)
@@ -51,7 +51,7 @@ mapview::mapview(legend = FALSE)
 
 
 El argumento de la localidad acepta un vector con los nombres de las localidades que conforman el área metropolitana.
-```{r loc_guadalajara, dpi = 200}
+```{r loc_guadalajara}
 guadalajara <- rgeomex::extract_locality(cve_edo = "14",
                                       locality = c("Guadalajara",
                                                    "Zapopan",
@@ -64,7 +64,7 @@ mapview::mapview(guadalajara, legend = FALSE)
 
 Tambien se puede usar base R para visualizar los bordes de la ciudad o el paquete ggpplot2, tmap o sfmap, etc.
 
-```{r, dpi = 250}
+```{r}
 ggplot2::ggplot()+
   ggplot2::geom_sf(data = acapulco_ageb$ageb,
                    fill = "gray80",
