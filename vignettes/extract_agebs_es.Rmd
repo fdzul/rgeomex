@@ -26,7 +26,9 @@ Para extraer los AGEBs de una localidad urbana de interes se usa la función fun
 merida <- rgeomex::extract_ageb(cve_edo = "31",
                                 locality = "Mérida")
 
-mapview::mapview(merida$ageb, legend = FALSE, col.regions = "#E01A59")
+mapview::mapview(merida$ageb, 
+                 legend = FALSE, 
+                 col.regions = "#E01A59")
 ```
 
 
@@ -36,7 +38,9 @@ mapview::mapview(merida$ageb, legend = FALSE, col.regions = "#E01A59")
 cdmx <- rgeomex::extract_ageb(cve_edo = "09",
                                 locality = "cdmx")
 
-mapview::mapview(cdmx$ageb, legend = FALSE, col.regions = "#E01A59")
+mapview::mapview(cdmx$ageb, 
+                 legend = FALSE, 
+                 col.regions = "#E01A59")
 ```
 
 
@@ -53,7 +57,9 @@ cdmx_agebs <- rgeomex::AGEB_inegi_2019_a |>
 cdmx_agebs <- cdmx_agebs[cdmx_loc, ]
 
 # Paso 3. verificar 
-mapview::mapview(cdmx_agebs,legend = FALSE, col.regions = "#E01A59")
+mapview::mapview(cdmx_agebs,
+                 legend = FALSE, 
+                 col.regions = "#E01A59")
 ```
 
 
