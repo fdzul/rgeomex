@@ -7,7 +7,7 @@ Maintainer: The package maintainer <felipe.dzul.m@gmail.com>
 Authors@R: person(given = "Felipe Antonio", family = "Dzul Manzanilla", role = c("aut", "cre"),
                         email = "felipe.dzul.m@gmail.com",
                         comment = c(ORCID = "https://orcid.org/0000-0002-2085-9141"),
-                        person("Fabián", "Correa-Morales", role = "aut",
+                        person(given = "Fabián", family = "Correa-Morales", role = "aut",
                         comment = c(ORCID = "https://orcid.org/0000-0002-6193-1242")))
 Description: the rgeomex package provides spatial dataset (areal data) available and published homepage of INE and INEGI.
 License: MIT + file LICENSE
