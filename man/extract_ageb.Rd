@@ -4,12 +4,12 @@
 \alias{extract_ageb}
 \title{extract_ageb}
 \usage{
-extract_ageb(locality, cve_geo)
+extract_ageb(locality, cve_edo)
 }
 \arguments{
 \item{locality}{locality target.}
 
-\item{cve_geo}{is a string of the state id.}
+\item{cve_edo}{is a string of the state id.}
 }
 \value{
 a list with two sf objects: a locality limit and the agebs of locality target
@@ -18,7 +18,9 @@ a list with two sf objects: a locality limit and the agebs of locality target
 This function extract the AGEB of the locality.
 }
 \examples{
-1+1
+x <- rgeomex::extract_ageb(cve_edo = "31", locality = "Merida")
+mapview::mapview(x$ageb)
+mapview::mapview(x$locality)
 }
 \author{
 Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com}.
