@@ -11,11 +11,14 @@ releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total)
 [![Codecov test
 coverage](https://codecov.io/gh/fdzul/rgeomex/branch/master/graph/badge.svg)](https://codecov.io/gh/fdzul/rgeomex?branch=master)
 
+<img align="center" src="rgeomex_logo.png" alt="logo" width="140">
+<p align="justify">
+
 **rgeomex** is a package developed in the
 [CENAPRECE](https://www.gob.mx/salud/cenaprece) dengue prevention and
 control program in collaboration with
 [INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published),
-and the states of Veracruz and Yucatan.
+and the states of Veracruz and Yucatan
 
 ## **overview**
 
