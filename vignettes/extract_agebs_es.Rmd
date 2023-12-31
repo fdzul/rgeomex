@@ -1,5 +1,5 @@
 ---
-title: "Extraer los AGEBs de una localidad"
+title: "extract_agebs_es"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{extract_agebs_es}

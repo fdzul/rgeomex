@@ -16,7 +16,7 @@ Authors@R: c(person(given = "Felipe Antonio",
                         comment = c(ORCID = "https://orcid.org/0000-0002-6193-1242")))
 Description: the rgeomex package provides spatial dataset (areal data) available and published homepage of INE and INEGI.
 License: MIT + file LICENSE
-URL: https://github.com/fdzul/rgeomex
+URL: https://github.com/fdzul/rgeomex, https://fdzul.github.io/rgeomex/
 BugReports: https://github.com/fdzul/rgeomex/issues
 Encoding: UTF-8
 LazyData: true

@@ -1,5 +1,5 @@
 ---
-title: "Extraer una localidad"
+title: "extract_locality_es"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{extract_locality_es}
