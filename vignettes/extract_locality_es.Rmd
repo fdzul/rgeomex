@@ -35,7 +35,7 @@ mapview::mapview(acapulco, legend = FALSE)
 Para extraer una localidad con la función extract_ageb, se usan dos argumentos, uno para definir la clave del estado (cve_geo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality).
 
 ```{r loc_acapulco2}
-acapulco_ageb <- rgeomex::extract_ageb(cve_geo = "12",
+acapulco_ageb <- rgeomex::extract_ageb(cve_edo = "12",
                                       locality = "Acapulco de Juárez")
 
 mapview::mapview(acapulco_ageb$locality, legend = FALSE)

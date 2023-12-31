@@ -17,3 +17,74 @@ knitr::opts_chunk$set(
 ```{r setup}
 library(rgeomex)
 ```
+
+
+Para extraer los sectores de una localidad urbana de interes se usa la función función **extract_sectores** ó puede extraerse con unas líneas  de código. La función **extract_sectores** tiene dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality). La función regresa una lista con dos elementos, un elemento corresponde a la localidad (locality) y el otro elemento corresponde a las manzanas.
+
+
+## Ejemplo de Guadalajara con la función **extract_sectores** 
+
+```{r sectores_guadalajara}
+x <- rgeomex::extract_sectores(cve_edo = "14", 
+                             locality = c("Guadalajara", "Zapopan",
+                                          "Tonalá", "Tlaquepaque"))
+mapview::mapview(x$sectores, legend = FALSE, col.regions = "#E01A59")
+```
+
+## Ejemplo de Guadalajara con **código** 
+
+
+```{r sectores_guadalajara_code}
+# Step 1. load the locality
+locality <- rgeomex::extract_locality(cve_edo = "14",
+                                         locality = c("Guadalajara", "Zapopan",
+                                          "Tonalá", "Tlaquepaque"))
+
+# Step 2. load the blocks
+sectores <- rgeomex::sectores_ine20_mx_b |>
+  sf::st_make_valid()
+
+# Step 3. extract the blocks of locality
+sectores_locality <- sectores[locality,]
+
+
+# Step 4. check the step 3.
+mapview::mapview(sectores_locality, 
+                 legend = FALSE, 
+                 col.regions = "#E01A59")
+```
+
+
+## Ejemplo de la Ciudad de México con la función **extract_sectores** 
+
+```{r sectores_cdmx}
+# Step 1. extract the blocks of locality
+x <- rgeomex::extract_sectores(cve_edo = "09", 
+                               locality = "cdmx")
+# Step 4. check the step 1.
+mapview::mapview(x$sectores, 
+                 legend = FALSE, 
+                 col.regions = "#E01A59")
+```
+
+
+## Ejemplo de la Ciudad de México con **código** 
+
+```{r sectores_cdmx_code}
+# Step 1. load the locality
+locality <- rgeomex::loc_inegi19_mx |>
+    dplyr::filter(CVE_ENT == "09") 
+
+# Step 2. load the blocks
+sectores <- rgeomex::sectores_ine20_mx_a |>
+  sf::st_make_valid()
+
+# Step 3. extract the blocks of locality
+sectores_locality <- sectores[locality, ]
+
+# Step 4. check the step 3.
+mapview::mapview(sectores_locality,legend = FALSE, 
+                 col.regions = "#E01A59")
+```
+
+
