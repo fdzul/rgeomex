@@ -15,8 +15,14 @@
 #' mapview::mapview(x$locality)
 extract_ageb <- function(locality, cve_edo){
 
-    loc <- rgeomex::extract_locality(cve_edo = cve_edo,
-                                     locality = locality)
+
+    if(cve_edo %in% c("09")){
+        loc <- rgeomex::loc_inegi19_mx |>
+            dplyr::filter(CVE_ENT == cve_edo)
+    } else{
+        loc <- rgeomex::extract_locality(cve_edo = cve_edo,
+                                         locality = locality)
+    }
 
     cve_edo <- as.numeric(cve_edo)
 
@@ -30,7 +36,7 @@ extract_ageb <- function(locality, cve_edo){
     y <- y[loc,]
 
     multi_return <- function() {
-        my_list <- list("locality" = x,
+        my_list <- list("locality" = loc,
                         "ageb" = y)
         return(my_list)
     }

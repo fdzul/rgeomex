@@ -18,18 +18,30 @@ knitr::opts_chunk$set(
 library(rgeomex)
 ```
 
-Para extraer los AGEBs de una localidad urbana de interes se usa la función función **extract_ageb** y en el caso de cdmx se extrae manual. La función **extract_ageb** tiene dos argumentos, uno para definir la clave del estado (cve_geo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality). La función regresa una lista con dos elementos, un elemento correspondo a la localidad (locality) y el otro elemento corresponde a los AGEBS (ageb)
+Para extraer los AGEBs de una localidad urbana de interes se usa la función función **extract_ageb** ó puede extraerse con unas líneas  de código. La función **extract_ageb** tiene dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality). La función regresa una lista con dos elementos, un elemento correspondo a la localidad (locality) y el otro elemento corresponde a los AGEBS (ageb)
 
-```{r ageb_merida}
-merida <- rgeomex::extract_ageb(cve_geo = "31",
+
+## Ejemplo de Mérida con la función **extract_ageb** 
+```{r merida}
+merida <- rgeomex::extract_ageb(cve_edo = "31",
                                 locality = "Merida")
 
-mapview::mapview(merida$ageb, legend = FALSE)
+mapview::mapview(merida$ageb, legend = FALSE, col.regions = "#E01A59")
 ```
 
-En el caso de ls Ciudad de México, primero se extrae la localidad y después, se realiza un recorte (clip) de los ageb con los limites de la CdMx.
 
-```{r loc_cdmx}
+## Ejemplo de la Ciudad de México con la función **extract_ageb** 
+
+```{r cdmx}
+cdmx <- rgeomex::extract_ageb(cve_edo = "09",
+                                locality = "cdmx")
+
+mapview::mapview(cdmx$ageb, legend = FALSE, col.regions = "#E01A59")
+```
+
+
+## Ejemplo de la Ciudad de México con **código** 
+```{r cdmx_code}
 # Paso 1. extraer la localidad 
 cdmx_loc <- rgeomex::loc_inegi19_mx |>
     dplyr::filter(CVE_ENT == "09") 
@@ -41,7 +53,7 @@ cdmx_agebs <- rgeomex::AGEB_inegi_2019_a |>
 cdmx_agebs <- cdmx_agebs[cdmx_loc, ]
 
 # Paso 3. verificar 
-mapview::mapview(cdmx_agebs,legend = FALSE)
+mapview::mapview(cdmx_agebs,legend = FALSE, col.regions = "#E01A59")
 ```
 
 
