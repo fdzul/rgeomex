@@ -31,5 +31,4 @@ Suggests:
     knitr,
     rmarkdown,
     testthat
-URL: https://fdzul.github.io/rgeomex/
 VignetteBuilder: knitr
