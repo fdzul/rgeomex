@@ -2,4 +2,8 @@ url: https://fdzul.github.io/rgeomex/
 template:
   bootstrap: 5
   theme: breeze-light
+navbar:
+  structure:
+    left:  [intro, reference, articles, tutorials, news]
+    right: [search, github]
 
