@@ -36,18 +36,31 @@ control program in Mexico.
 
 The package has six spatial datasets.
 
-- **`blocks_ine20_mx`** spatial dataset containing polygon data of
-  blocks from Mexico (INE 2020).
-- **`loc_inegi19_mx`** spatial dataset containing polygon data of
-  localities from Mexico (INEGI 2019).
 - **`AGEB_inegi_2019_mx`** spatial dataset containing polygon data of
-  AGEBs (Area Geostadística Basica) from Mexico (INEGI 2019).
-- **`AGEE_inegi19_mx`** spatial dataset containing polygon data of AGEE
-  (Area Geostadística Estatal) from Mexico (INEGI 2019).
-- **`AGEM_inegi19_mx`** spatial dataset containing polygon data of AGEM
-  (Area Geostadística Municipal) from Mexico (INEGI 2019).
+  AGEBs (Area Geostadística Basica) from Mexico (INEGI 2019). The urban
+  AGEBs are split in two files.
+
+<img src="man/figures/README-agebs-1.png" width="100%" />
+
+- **`blocks_ine20_mx`** spatial dataset containing polygon data of
+  blocks from Mexico (INE 2020). The blocks of the urban cities are
+  split in five files from a to e.
+
+<img src="man/figures/README-blocks-1.png" width="100%" />
+
 - **`sectores_ine20_mx`** spatial dataset containing polygon data
   sectores INE from Mexico.
+
+<img src="man/figures/README-sectores-1.png" width="100%" />
+
+- **`loc_inegi19_mx`** spatial dataset containing polygon data of
+  localities from Mexico (INEGI 2019).
+
+- **`AGEE_inegi19_mx`** spatial dataset containing polygon data of AGEE
+  (Area Geostadística Estatal) from Mexico (INEGI 2019).
+
+- **`AGEM_inegi19_mx`** spatial dataset containing polygon data of AGEM
+  (Area Geostadística Municipal) from Mexico (INEGI 2019).
 
 This package is currently available only in R, and we hope that it will
 soon become available in Python.
