@@ -4,10 +4,15 @@ Title: The rgeomex provides the polygon data of INEGI 2019 and INE 2020
 Version: 0.1.0
 Author: Felipe Antonio Dzul Manzanilla
 Maintainer: The package maintainer <felipe.dzul.m@gmail.com>
-Authors@R: person(given = "Felipe Antonio", family = "Dzul Manzanilla", role = c("aut", "cre"),
+Authors@R: c(person(given = "Felipe Antonio",
+                        family = "Dzul Manzanilla",
+                        role = c("aut", "cre"),
                         email = "felipe.dzul.m@gmail.com",
-                        comment = c(ORCID = "https://orcid.org/0000-0002-2085-9141"),
-                        person(given = "Fabián", family = "Correa-Morales", role = "aut",
+                        comment = c(ORCID = "https://orcid.org/0000-0002-2085-9141")),
+                 person(given = "Fabian",
+                        family = "Correa-Morales",
+                        role = c("ctb"),
+                        email = "fabiancorrea@msn.com",
                         comment = c(ORCID = "https://orcid.org/0000-0002-6193-1242")))
 Description: the rgeomex package provides spatial dataset (areal data) available and published homepage of INE and INEGI.
 License: MIT + file LICENSE
