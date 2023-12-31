@@ -27,9 +27,8 @@ extract_ageb <- function(locality, cve_edo){
     cve_edo <- as.numeric(cve_edo)
 
     if(cve_edo %in% c(1:16)){
-        y <- rgeomex::AGEB_inegi_2019_a |>
-            sf::st_make_valid()}
-    if(cve_edo %in% c(17:32)){y <- rgeomex::AGEB_inegi_2019_a |>
+        y <- rgeomex::AGEB_inegi_2019_a |> sf::st_make_valid()}
+    if(cve_edo %in% c(17:32)){y <- rgeomex::AGEB_inegi_2019_b |>
         sf::st_make_valid()}
 
 

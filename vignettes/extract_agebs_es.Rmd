@@ -24,7 +24,7 @@ Para extraer los AGEBs de una localidad urbana de interes se usa la función fun
 ## Ejemplo de Mérida con la función **extract_ageb** 
 ```{r merida}
 merida <- rgeomex::extract_ageb(cve_edo = "31",
-                                locality = "Merida")
+                                locality = "Mérida")
 
 mapview::mapview(merida$ageb, legend = FALSE, col.regions = "#E01A59")
 ```
