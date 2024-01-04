@@ -21,39 +21,42 @@ and the states of Veracruz and Yucatan.
 
 ## **overview**
 
-**rgeomex**. Geographic data and geographical datasets from the
+Geographical datasets from the
 [INEGI](https://www.inegi.org.mx/temas/mg) and
 [INE](https://pautas.ine.mx/transparencia/mapas/) are available in the R
-package **rgeomex**. Geographical data at various resolutions (states,
-municipalities, localities, agebs, blocks, sectors, and neighborhoods)
-constitute the majority of the package’s content.
+package **rgeomex**. Geographical dataset at various resolutions
+(states, municipalities, localities, agebs, blocks, sectors, and
+neighborhoods) constitute the majority of the package’s content.
 
 **rgeomex** constitutes a transversal package of the **ETVerse** and
-**IVAverse** initiatives. **rgeomex**, together with denepikit,
-denhotspots, deneggs, and dencontrol packages, constitute a universe of
-packages that make up the dengueverse of the dengue prevention and
-control program in Mexico.
+**IVAverse** initiatives. [rgeomex](https://fdzul.github.io/rgeomex/),
+together with *denepikit*, *denhotspots*,
+[deneggs](https://fdzul.github.io/deneggs/), and *dencontrol* packages,
+constitute a universe of packages that make up the dengueverse of the
+dengue prevention and control program in Mexico.
 
-The package has six spatial datasets.
+The package has six spatial datasets and functions for extract the AGEBs
+(extract_ageb), blocks (extract_blocks), sectores (extract_sectores) &
+localities (extract_locality).
 
 - **`AGEB_inegi_2019_mx`** spatial dataset containing polygon data of
   AGEBs (Area Geostadística Basica) from Mexico (INEGI 2019). The urban
   AGEBs are split in two files.
 
-<div id="tzuzikotvb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#tzuzikotvb table {
+<div id="mgiknfifwr" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mgiknfifwr table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#tzuzikotvb thead, #tzuzikotvb tbody, #tzuzikotvb tfoot, #tzuzikotvb tr, #tzuzikotvb td, #tzuzikotvb th {
+&#10;#mgiknfifwr thead, #mgiknfifwr tbody, #mgiknfifwr tfoot, #mgiknfifwr tr, #mgiknfifwr td, #mgiknfifwr th {
   border-style: none;
 }
-&#10;#tzuzikotvb p {
+&#10;#mgiknfifwr p {
   margin: 0;
   padding: 0;
 }
-&#10;#tzuzikotvb .gt_table {
+&#10;#mgiknfifwr .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -78,11 +81,11 @@ The package has six spatial datasets.
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_caption {
+&#10;#mgiknfifwr .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#tzuzikotvb .gt_title {
+&#10;#mgiknfifwr .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -93,7 +96,7 @@ The package has six spatial datasets.
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#tzuzikotvb .gt_subtitle {
+&#10;#mgiknfifwr .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -104,7 +107,7 @@ The package has six spatial datasets.
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#tzuzikotvb .gt_heading {
+&#10;#mgiknfifwr .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -115,12 +118,12 @@ The package has six spatial datasets.
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_bottom_border {
+&#10;#mgiknfifwr .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_col_headings {
+&#10;#mgiknfifwr .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -134,7 +137,7 @@ The package has six spatial datasets.
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_col_heading {
+&#10;#mgiknfifwr .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -153,7 +156,7 @@ The package has six spatial datasets.
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#tzuzikotvb .gt_column_spanner_outer {
+&#10;#mgiknfifwr .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -164,13 +167,13 @@ The package has six spatial datasets.
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#tzuzikotvb .gt_column_spanner_outer:first-child {
+&#10;#mgiknfifwr .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#tzuzikotvb .gt_column_spanner_outer:last-child {
+&#10;#mgiknfifwr .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#tzuzikotvb .gt_column_spanner {
+&#10;#mgiknfifwr .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -181,10 +184,10 @@ The package has six spatial datasets.
   display: inline-block;
   width: 100%;
 }
-&#10;#tzuzikotvb .gt_spanner_row {
+&#10;#mgiknfifwr .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#tzuzikotvb .gt_group_heading {
+&#10;#mgiknfifwr .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -209,7 +212,7 @@ The package has six spatial datasets.
   vertical-align: middle;
   text-align: left;
 }
-&#10;#tzuzikotvb .gt_empty_group_heading {
+&#10;#mgiknfifwr .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -223,13 +226,13 @@ The package has six spatial datasets.
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#tzuzikotvb .gt_from_md > :first-child {
+&#10;#mgiknfifwr .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#tzuzikotvb .gt_from_md > :last-child {
+&#10;#mgiknfifwr .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#tzuzikotvb .gt_row {
+&#10;#mgiknfifwr .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -247,7 +250,7 @@ The package has six spatial datasets.
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#tzuzikotvb .gt_stub {
+&#10;#mgiknfifwr .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -259,7 +262,7 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tzuzikotvb .gt_stub_row_group {
+&#10;#mgiknfifwr .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -272,13 +275,13 @@ The package has six spatial datasets.
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#tzuzikotvb .gt_row_group_first td {
+&#10;#mgiknfifwr .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#tzuzikotvb .gt_row_group_first th {
+&#10;#mgiknfifwr .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#tzuzikotvb .gt_summary_row {
+&#10;#mgiknfifwr .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -287,14 +290,14 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tzuzikotvb .gt_first_summary_row {
+&#10;#mgiknfifwr .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_first_summary_row.thick {
+&#10;#mgiknfifwr .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#tzuzikotvb .gt_last_summary_row {
+&#10;#mgiknfifwr .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -303,7 +306,7 @@ The package has six spatial datasets.
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_grand_summary_row {
+&#10;#mgiknfifwr .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -312,7 +315,7 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tzuzikotvb .gt_first_grand_summary_row {
+&#10;#mgiknfifwr .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -321,7 +324,7 @@ The package has six spatial datasets.
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_last_grand_summary_row_top {
+&#10;#mgiknfifwr .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -330,10 +333,10 @@ The package has six spatial datasets.
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_striped {
+&#10;#mgiknfifwr .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#tzuzikotvb .gt_table_body {
+&#10;#mgiknfifwr .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -341,7 +344,7 @@ The package has six spatial datasets.
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_footnotes {
+&#10;#mgiknfifwr .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -354,7 +357,7 @@ The package has six spatial datasets.
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_footnote {
+&#10;#mgiknfifwr .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -362,7 +365,7 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tzuzikotvb .gt_sourcenotes {
+&#10;#mgiknfifwr .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -375,57 +378,57 @@ The package has six spatial datasets.
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#tzuzikotvb .gt_sourcenote {
+&#10;#mgiknfifwr .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#tzuzikotvb .gt_left {
+&#10;#mgiknfifwr .gt_left {
   text-align: left;
 }
-&#10;#tzuzikotvb .gt_center {
+&#10;#mgiknfifwr .gt_center {
   text-align: center;
 }
-&#10;#tzuzikotvb .gt_right {
+&#10;#mgiknfifwr .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#tzuzikotvb .gt_font_normal {
+&#10;#mgiknfifwr .gt_font_normal {
   font-weight: normal;
 }
-&#10;#tzuzikotvb .gt_font_bold {
+&#10;#mgiknfifwr .gt_font_bold {
   font-weight: bold;
 }
-&#10;#tzuzikotvb .gt_font_italic {
+&#10;#mgiknfifwr .gt_font_italic {
   font-style: italic;
 }
-&#10;#tzuzikotvb .gt_super {
+&#10;#mgiknfifwr .gt_super {
   font-size: 65%;
 }
-&#10;#tzuzikotvb .gt_footnote_marks {
+&#10;#mgiknfifwr .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#tzuzikotvb .gt_asterisk {
+&#10;#mgiknfifwr .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#tzuzikotvb .gt_indent_1 {
+&#10;#mgiknfifwr .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#tzuzikotvb .gt_indent_2 {
+&#10;#mgiknfifwr .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#tzuzikotvb .gt_indent_3 {
+&#10;#mgiknfifwr .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#tzuzikotvb .gt_indent_4 {
+&#10;#mgiknfifwr .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#tzuzikotvb .gt_indent_5 {
+&#10;#mgiknfifwr .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -450,20 +453,20 @@ The package has six spatial datasets.
   blocks from Mexico (INE 2020). The blocks of the urban cities are
   split in five files from a to e.
 
-<div id="dkzikeqraj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#dkzikeqraj table {
+<div id="vsywmbccqt" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vsywmbccqt table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#dkzikeqraj thead, #dkzikeqraj tbody, #dkzikeqraj tfoot, #dkzikeqraj tr, #dkzikeqraj td, #dkzikeqraj th {
+&#10;#vsywmbccqt thead, #vsywmbccqt tbody, #vsywmbccqt tfoot, #vsywmbccqt tr, #vsywmbccqt td, #vsywmbccqt th {
   border-style: none;
 }
-&#10;#dkzikeqraj p {
+&#10;#vsywmbccqt p {
   margin: 0;
   padding: 0;
 }
-&#10;#dkzikeqraj .gt_table {
+&#10;#vsywmbccqt .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -488,11 +491,11 @@ The package has six spatial datasets.
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_caption {
+&#10;#vsywmbccqt .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#dkzikeqraj .gt_title {
+&#10;#vsywmbccqt .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -503,7 +506,7 @@ The package has six spatial datasets.
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#dkzikeqraj .gt_subtitle {
+&#10;#vsywmbccqt .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -514,7 +517,7 @@ The package has six spatial datasets.
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#dkzikeqraj .gt_heading {
+&#10;#vsywmbccqt .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -525,12 +528,12 @@ The package has six spatial datasets.
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_bottom_border {
+&#10;#vsywmbccqt .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_col_headings {
+&#10;#vsywmbccqt .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -544,7 +547,7 @@ The package has six spatial datasets.
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_col_heading {
+&#10;#vsywmbccqt .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -563,7 +566,7 @@ The package has six spatial datasets.
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#dkzikeqraj .gt_column_spanner_outer {
+&#10;#vsywmbccqt .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -574,13 +577,13 @@ The package has six spatial datasets.
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#dkzikeqraj .gt_column_spanner_outer:first-child {
+&#10;#vsywmbccqt .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#dkzikeqraj .gt_column_spanner_outer:last-child {
+&#10;#vsywmbccqt .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#dkzikeqraj .gt_column_spanner {
+&#10;#vsywmbccqt .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -591,10 +594,10 @@ The package has six spatial datasets.
   display: inline-block;
   width: 100%;
 }
-&#10;#dkzikeqraj .gt_spanner_row {
+&#10;#vsywmbccqt .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#dkzikeqraj .gt_group_heading {
+&#10;#vsywmbccqt .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -619,7 +622,7 @@ The package has six spatial datasets.
   vertical-align: middle;
   text-align: left;
 }
-&#10;#dkzikeqraj .gt_empty_group_heading {
+&#10;#vsywmbccqt .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -633,13 +636,13 @@ The package has six spatial datasets.
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#dkzikeqraj .gt_from_md > :first-child {
+&#10;#vsywmbccqt .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#dkzikeqraj .gt_from_md > :last-child {
+&#10;#vsywmbccqt .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#dkzikeqraj .gt_row {
+&#10;#vsywmbccqt .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -657,7 +660,7 @@ The package has six spatial datasets.
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#dkzikeqraj .gt_stub {
+&#10;#vsywmbccqt .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -669,7 +672,7 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#dkzikeqraj .gt_stub_row_group {
+&#10;#vsywmbccqt .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -682,13 +685,13 @@ The package has six spatial datasets.
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#dkzikeqraj .gt_row_group_first td {
+&#10;#vsywmbccqt .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#dkzikeqraj .gt_row_group_first th {
+&#10;#vsywmbccqt .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#dkzikeqraj .gt_summary_row {
+&#10;#vsywmbccqt .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -697,14 +700,14 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#dkzikeqraj .gt_first_summary_row {
+&#10;#vsywmbccqt .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_first_summary_row.thick {
+&#10;#vsywmbccqt .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#dkzikeqraj .gt_last_summary_row {
+&#10;#vsywmbccqt .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -713,7 +716,7 @@ The package has six spatial datasets.
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_grand_summary_row {
+&#10;#vsywmbccqt .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -722,7 +725,7 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#dkzikeqraj .gt_first_grand_summary_row {
+&#10;#vsywmbccqt .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -731,7 +734,7 @@ The package has six spatial datasets.
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_last_grand_summary_row_top {
+&#10;#vsywmbccqt .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -740,10 +743,10 @@ The package has six spatial datasets.
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_striped {
+&#10;#vsywmbccqt .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#dkzikeqraj .gt_table_body {
+&#10;#vsywmbccqt .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -751,7 +754,7 @@ The package has six spatial datasets.
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_footnotes {
+&#10;#vsywmbccqt .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -764,7 +767,7 @@ The package has six spatial datasets.
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_footnote {
+&#10;#vsywmbccqt .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -772,7 +775,7 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#dkzikeqraj .gt_sourcenotes {
+&#10;#vsywmbccqt .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -785,57 +788,57 @@ The package has six spatial datasets.
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#dkzikeqraj .gt_sourcenote {
+&#10;#vsywmbccqt .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#dkzikeqraj .gt_left {
+&#10;#vsywmbccqt .gt_left {
   text-align: left;
 }
-&#10;#dkzikeqraj .gt_center {
+&#10;#vsywmbccqt .gt_center {
   text-align: center;
 }
-&#10;#dkzikeqraj .gt_right {
+&#10;#vsywmbccqt .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#dkzikeqraj .gt_font_normal {
+&#10;#vsywmbccqt .gt_font_normal {
   font-weight: normal;
 }
-&#10;#dkzikeqraj .gt_font_bold {
+&#10;#vsywmbccqt .gt_font_bold {
   font-weight: bold;
 }
-&#10;#dkzikeqraj .gt_font_italic {
+&#10;#vsywmbccqt .gt_font_italic {
   font-style: italic;
 }
-&#10;#dkzikeqraj .gt_super {
+&#10;#vsywmbccqt .gt_super {
   font-size: 65%;
 }
-&#10;#dkzikeqraj .gt_footnote_marks {
+&#10;#vsywmbccqt .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#dkzikeqraj .gt_asterisk {
+&#10;#vsywmbccqt .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#dkzikeqraj .gt_indent_1 {
+&#10;#vsywmbccqt .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#dkzikeqraj .gt_indent_2 {
+&#10;#vsywmbccqt .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#dkzikeqraj .gt_indent_3 {
+&#10;#vsywmbccqt .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#dkzikeqraj .gt_indent_4 {
+&#10;#vsywmbccqt .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#dkzikeqraj .gt_indent_5 {
+&#10;#vsywmbccqt .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -865,20 +868,20 @@ The package has six spatial datasets.
 - **`sectores_ine20_mx`** spatial dataset containing polygon data
   sectores INE from Mexico.
 
-<div id="ndxoyjjuhf" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ndxoyjjuhf table {
+<div id="oapsdmteka" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#oapsdmteka table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-&#10;#ndxoyjjuhf thead, #ndxoyjjuhf tbody, #ndxoyjjuhf tfoot, #ndxoyjjuhf tr, #ndxoyjjuhf td, #ndxoyjjuhf th {
+&#10;#oapsdmteka thead, #oapsdmteka tbody, #oapsdmteka tfoot, #oapsdmteka tr, #oapsdmteka td, #oapsdmteka th {
   border-style: none;
 }
-&#10;#ndxoyjjuhf p {
+&#10;#oapsdmteka p {
   margin: 0;
   padding: 0;
 }
-&#10;#ndxoyjjuhf .gt_table {
+&#10;#oapsdmteka .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -903,11 +906,11 @@ The package has six spatial datasets.
   border-left-width: 2px;
   border-left-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_caption {
+&#10;#oapsdmteka .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
-&#10;#ndxoyjjuhf .gt_title {
+&#10;#oapsdmteka .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -918,7 +921,7 @@ The package has six spatial datasets.
   border-bottom-color: #FFFFFF;
   border-bottom-width: 0;
 }
-&#10;#ndxoyjjuhf .gt_subtitle {
+&#10;#oapsdmteka .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -929,7 +932,7 @@ The package has six spatial datasets.
   border-top-color: #FFFFFF;
   border-top-width: 0;
 }
-&#10;#ndxoyjjuhf .gt_heading {
+&#10;#oapsdmteka .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -940,12 +943,12 @@ The package has six spatial datasets.
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_bottom_border {
+&#10;#oapsdmteka .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_col_headings {
+&#10;#oapsdmteka .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -959,7 +962,7 @@ The package has six spatial datasets.
   border-right-width: 1px;
   border-right-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_col_heading {
+&#10;#oapsdmteka .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -978,7 +981,7 @@ The package has six spatial datasets.
   padding-right: 5px;
   overflow-x: hidden;
 }
-&#10;#ndxoyjjuhf .gt_column_spanner_outer {
+&#10;#oapsdmteka .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -989,13 +992,13 @@ The package has six spatial datasets.
   padding-left: 4px;
   padding-right: 4px;
 }
-&#10;#ndxoyjjuhf .gt_column_spanner_outer:first-child {
+&#10;#oapsdmteka .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
-&#10;#ndxoyjjuhf .gt_column_spanner_outer:last-child {
+&#10;#oapsdmteka .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
-&#10;#ndxoyjjuhf .gt_column_spanner {
+&#10;#oapsdmteka .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1006,10 +1009,10 @@ The package has six spatial datasets.
   display: inline-block;
   width: 100%;
 }
-&#10;#ndxoyjjuhf .gt_spanner_row {
+&#10;#oapsdmteka .gt_spanner_row {
   border-bottom-style: hidden;
 }
-&#10;#ndxoyjjuhf .gt_group_heading {
+&#10;#oapsdmteka .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1034,7 +1037,7 @@ The package has six spatial datasets.
   vertical-align: middle;
   text-align: left;
 }
-&#10;#ndxoyjjuhf .gt_empty_group_heading {
+&#10;#oapsdmteka .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1048,13 +1051,13 @@ The package has six spatial datasets.
   border-bottom-color: #D3D3D3;
   vertical-align: middle;
 }
-&#10;#ndxoyjjuhf .gt_from_md > :first-child {
+&#10;#oapsdmteka .gt_from_md > :first-child {
   margin-top: 0;
 }
-&#10;#ndxoyjjuhf .gt_from_md > :last-child {
+&#10;#oapsdmteka .gt_from_md > :last-child {
   margin-bottom: 0;
 }
-&#10;#ndxoyjjuhf .gt_row {
+&#10;#oapsdmteka .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1072,7 +1075,7 @@ The package has six spatial datasets.
   vertical-align: middle;
   overflow-x: hidden;
 }
-&#10;#ndxoyjjuhf .gt_stub {
+&#10;#oapsdmteka .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1084,7 +1087,7 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ndxoyjjuhf .gt_stub_row_group {
+&#10;#oapsdmteka .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1097,13 +1100,13 @@ The package has six spatial datasets.
   padding-right: 5px;
   vertical-align: top;
 }
-&#10;#ndxoyjjuhf .gt_row_group_first td {
+&#10;#oapsdmteka .gt_row_group_first td {
   border-top-width: 2px;
 }
-&#10;#ndxoyjjuhf .gt_row_group_first th {
+&#10;#oapsdmteka .gt_row_group_first th {
   border-top-width: 2px;
 }
-&#10;#ndxoyjjuhf .gt_summary_row {
+&#10;#oapsdmteka .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1112,14 +1115,14 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ndxoyjjuhf .gt_first_summary_row {
+&#10;#oapsdmteka .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_first_summary_row.thick {
+&#10;#oapsdmteka .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
-&#10;#ndxoyjjuhf .gt_last_summary_row {
+&#10;#oapsdmteka .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1128,7 +1131,7 @@ The package has six spatial datasets.
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_grand_summary_row {
+&#10;#oapsdmteka .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1137,7 +1140,7 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ndxoyjjuhf .gt_first_grand_summary_row {
+&#10;#oapsdmteka .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1146,7 +1149,7 @@ The package has six spatial datasets.
   border-top-width: 6px;
   border-top-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_last_grand_summary_row_top {
+&#10;#oapsdmteka .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1155,10 +1158,10 @@ The package has six spatial datasets.
   border-bottom-width: 6px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_striped {
+&#10;#oapsdmteka .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
-&#10;#ndxoyjjuhf .gt_table_body {
+&#10;#oapsdmteka .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1166,7 +1169,7 @@ The package has six spatial datasets.
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_footnotes {
+&#10;#oapsdmteka .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1179,7 +1182,7 @@ The package has six spatial datasets.
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_footnote {
+&#10;#oapsdmteka .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1187,7 +1190,7 @@ The package has six spatial datasets.
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ndxoyjjuhf .gt_sourcenotes {
+&#10;#oapsdmteka .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1200,57 +1203,57 @@ The package has six spatial datasets.
   border-right-width: 2px;
   border-right-color: #D3D3D3;
 }
-&#10;#ndxoyjjuhf .gt_sourcenote {
+&#10;#oapsdmteka .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
   padding-left: 5px;
   padding-right: 5px;
 }
-&#10;#ndxoyjjuhf .gt_left {
+&#10;#oapsdmteka .gt_left {
   text-align: left;
 }
-&#10;#ndxoyjjuhf .gt_center {
+&#10;#oapsdmteka .gt_center {
   text-align: center;
 }
-&#10;#ndxoyjjuhf .gt_right {
+&#10;#oapsdmteka .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
-&#10;#ndxoyjjuhf .gt_font_normal {
+&#10;#oapsdmteka .gt_font_normal {
   font-weight: normal;
 }
-&#10;#ndxoyjjuhf .gt_font_bold {
+&#10;#oapsdmteka .gt_font_bold {
   font-weight: bold;
 }
-&#10;#ndxoyjjuhf .gt_font_italic {
+&#10;#oapsdmteka .gt_font_italic {
   font-style: italic;
 }
-&#10;#ndxoyjjuhf .gt_super {
+&#10;#oapsdmteka .gt_super {
   font-size: 65%;
 }
-&#10;#ndxoyjjuhf .gt_footnote_marks {
+&#10;#oapsdmteka .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
-&#10;#ndxoyjjuhf .gt_asterisk {
+&#10;#oapsdmteka .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
-&#10;#ndxoyjjuhf .gt_indent_1 {
+&#10;#oapsdmteka .gt_indent_1 {
   text-indent: 5px;
 }
-&#10;#ndxoyjjuhf .gt_indent_2 {
+&#10;#oapsdmteka .gt_indent_2 {
   text-indent: 10px;
 }
-&#10;#ndxoyjjuhf .gt_indent_3 {
+&#10;#oapsdmteka .gt_indent_3 {
   text-indent: 15px;
 }
-&#10;#ndxoyjjuhf .gt_indent_4 {
+&#10;#oapsdmteka .gt_indent_4 {
   text-indent: 20px;
 }
-&#10;#ndxoyjjuhf .gt_indent_5 {
+&#10;#oapsdmteka .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1326,7 +1329,7 @@ pak::pkg_install("fdzul/rgeomex")
 
 - **Heron Huerta**
 
-- **Dorothy Dzul**
+- **Dorothy Dzul-Cuevas**
 
 See also the list of
 [contributors](https://github.com/fdzul/geomex/contributors) who
@@ -1335,7 +1338,8 @@ participated in this project.
 ## Credits
 
 Original shapefiles are created by official government institutions
-(INEGI & INE).
+([INEGI](https://www.inegi.org.mx/temas/mg) &
+[INE](https://pautas.ine.mx/transparencia/mapas/)).
 
 ## License
 

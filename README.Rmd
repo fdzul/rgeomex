@@ -25,11 +25,11 @@ knitr::opts_chunk$set(
 
 ## **overview**
 
-**rgeomex**. Geographic data and geographical datasets from the [INEGI](https://www.inegi.org.mx/temas/mg) and [INE](https://pautas.ine.mx/transparencia/mapas/) are available in the R package **rgeomex**. Geographical data at various resolutions (states, municipalities, localities, agebs, blocks, sectors, and neighborhoods) constitute  the majority of the package's content.
+Geographical datasets from the [INEGI](https://www.inegi.org.mx/temas/mg) and [INE](https://pautas.ine.mx/transparencia/mapas/) are available in the R package **rgeomex**. Geographical dataset at various resolutions (states, municipalities, localities, agebs, blocks, sectors, and neighborhoods) constitute  the majority of the package's content.
 
-**rgeomex** constitutes a transversal package of the **ETVerse** and **IVAverse** initiatives. **rgeomex**, together with  denepikit, denhotspots, deneggs, and dencontrol packages, constitute a universe of packages that make up the dengueverse of the dengue prevention and control program in Mexico.
+**rgeomex** constitutes a transversal package of the **ETVerse** and **IVAverse** initiatives. [rgeomex](https://fdzul.github.io/rgeomex/), together with  *denepikit*, *denhotspots*, [deneggs](https://fdzul.github.io/deneggs/), and *dencontrol* packages, constitute a universe of packages that make up the dengueverse of the dengue prevention and control program in Mexico.
 
-The package has six spatial datasets.
+The package has six spatial datasets and functions for extract the AGEBs (extract_ageb), blocks (extract_blocks), sectores (extract_sectores) & localities (extract_locality).
 
 - **`AGEB_inegi_2019_mx`** spatial dataset containing polygon data of AGEBs (Area Geostadística Basica) from Mexico (INEGI 2019). The urban AGEBs are split in two files.
   
@@ -106,14 +106,14 @@ pak::pkg_install("fdzul/rgeomex")
 * **Arturo Baez-Hernández**
 * **Evaristo Morales Ríos**
 * **Heron Huerta**
-* **Dorothy Dzul**
+* **Dorothy Dzul-Cuevas**
 
 
 
 See also the list of [contributors](https://github.com/fdzul/geomex/contributors) who participated in this project.
 
 ## Credits
-Original shapefiles are created by official government institutions (INEGI & INE).
+Original shapefiles are created by official government institutions ([INEGI](https://www.inegi.org.mx/temas/mg) & [INE](https://pautas.ine.mx/transparencia/mapas/)).
 
 ## License
 
