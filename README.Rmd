@@ -34,15 +34,10 @@ The package has six spatial datasets.
 - **`AGEB_inegi_2019_mx`** spatial dataset containing polygon data of AGEBs (Area Geostadística Basica) from Mexico (INEGI 2019). The urban AGEBs are split in two files.
   
 ```{r agebs, echo=FALSE, dpi = 300}
-tibble::tibble(dataset = c("AGEB_inegi_2019_a",
-                           "AGEB_inegi_2019_b"),
-               id_states = c("01-16", "17-2")) |>
-  reactable::reactable(defaultPageSize = 2,
-                       theme = reactablefmtr::flatly(),
-                       filterable = TRUE,
-                       resizable = TRUE,
-                       wrap = FALSE, 
-                       bordered = TRUE)
+tibble::tibble(dataset = c("rgeomex::AGEB_inegi_2019_a",
+                           "rgeomex::AGEB_inegi_2019_b"),
+               id_states = c("01-16", "17-32")) |>
+  gt::gt()
 ```
 
 - **`blocks_ine20_mx`** spatial dataset containing polygon data of blocks from Mexico (INE 2020). The blocks of the urban cities are split in five files from a to e. 
@@ -56,12 +51,7 @@ tibble::tibble(dataset = c("blocks_ine20_mx_a",
                id_states = c("1-10", "11-14", 
                              "15-19", "20-25",
                              "26-32")) |>
-  reactable::reactable(defaultPageSize = 5,
-                             theme = reactablefmtr::flatly(),
-                             filterable = TRUE, 
-                             resizable = TRUE, 
-                             wrap = FALSE, 
-                             bordered = TRUE)
+  gt::gt()
 ```
  
 - **`sectores_ine20_mx`** spatial dataset containing polygon data sectores INE from Mexico.
@@ -71,12 +61,7 @@ tibble::tibble(dataset = c("sectores_ine20_mx_a",
                            "sectores_ine20_mx_b",
                            "sectores_ine20_mx_c"),
                id_states = c("01-10", "11-20", "21-32")) |>
-  reactable::reactable(defaultPageSize = 3,
-                             theme = reactablefmtr::flatly(),
-                             filterable = FALSE, 
-                             resizable = TRUE, 
-                             wrap = FALSE, 
-                             bordered = TRUE)
+  gt::gt()
 ```
 
 - **`loc_inegi19_mx`** spatial dataset containing polygon data of localities from Mexico (INEGI 2019).
