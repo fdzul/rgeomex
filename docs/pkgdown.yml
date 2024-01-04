@@ -1,0 +1,10 @@
+pandoc: 3.1.1
+pkgdown: 2.0.7
+pkgdown_sha: ~
+articles:
+  extract_agebs_es: extract_agebs_es.html
+  extract_blocks_es: extract_blocks_es.html
+  extract_locality_es: extract_locality_es.html
+  extract_sectors_es: extract_sectors_es.html
+last_built: 2024-01-04T20:30Z
+
