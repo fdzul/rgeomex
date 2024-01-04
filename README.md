@@ -11,8 +11,6 @@ releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total)
 [![Codecov test
 coverage](https://codecov.io/gh/fdzul/rgeomex/branch/master/graph/badge.svg)](https://codecov.io/gh/fdzul/rgeomex?branch=master)
 
-<img align="center" src="https://github.com/fdzul/rgeomex/blob/main/rgeomex_logo.png?raw=true" alt="logo" width="140">
-
 **rgeomex** is a package developed in the
 [CENAPRECE](https://www.gob.mx/salud/cenaprece) dengue prevention and
 control program in collaboration with
