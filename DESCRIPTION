@@ -11,7 +11,7 @@ Authors@R: c(person(given = "Felipe Antonio",
                         comment = c(ORCID = "https://orcid.org/0000-0002-2085-9141")),
                  person(given = "Fabian",
                         family = "Correa-Morales",
-                        role = c("ctb"),
+                        role = c("aut", "ctb"),
                         email = "fabiancorrea@msn.com",
                         comment = c(ORCID = "https://orcid.org/0000-0002-6193-1242")))
 Description: the rgeomex package provides spatial dataset (areal data) available and published homepage of INE and INEGI.
