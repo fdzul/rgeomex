@@ -10,7 +10,8 @@
 extract_locality <- function(cve_edo, locality){
 
     if(cve_edo %in% c("09")){
-        # rgeomex::loc_inegi19_mx |> dplyr::filter(CVE_ENT == cve_edo)
+        rgeomex::loc_inegi19_mx |>
+            dplyr::filter(CVE_ENT == cve_edo)
     } else{
         rgeomex::loc_inegi19_mx |>
             dplyr::filter(CVE_ENT %in% c(cve_edo)) |>
@@ -18,8 +19,4 @@ extract_locality <- function(cve_edo, locality){
             sf::st_make_valid()
     }
 
-    rgeomex::loc_inegi19_mx |>
-        dplyr::filter(CVE_ENT %in% c(cve_edo)) |>
-        dplyr::filter(NOMGEO %in% c(rgeomex::find_most_similar_string(locality, unique(NOMGEO)))) |>
-        sf::st_make_valid()
 }
