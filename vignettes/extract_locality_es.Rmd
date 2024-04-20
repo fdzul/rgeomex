@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(rgeomex)
+library(tidyverse)
 ```
 
 
@@ -44,8 +45,8 @@ mapview::mapview(acapulco_ageb$locality, legend = FALSE)
 Ambas funciones se pueden usar para todas las localidades urbanas de México, excepto la Ciudad de México para esta se usa otro código para extraer toda la localidad.
 
 ```{r loc_cdmx}
-rgeomex::loc_inegi19_mx |>
-    dplyr::filter(CVE_ENT == "09") |>
+rgeomex::loc_inegi19_mx %>%
+    dplyr::filter(CVE_ENT == "09") %>%
 mapview::mapview(legend = FALSE)
 ```
 

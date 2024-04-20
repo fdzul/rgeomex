@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(rgeomex)
+library(tidyverse)
 ```
 
 
@@ -41,7 +42,7 @@ locality <- rgeomex::extract_locality(cve_edo = "14",
                                           "Tonalá", "Tlaquepaque"))
 
 # Step 2. load the blocks
-sectores <- rgeomex::sectores_ine20_mx_b |>
+sectores <- rgeomex::sectores_ine20_mx_b %>%
   sf::st_make_valid()
 
 # Step 3. extract the blocks of locality
@@ -72,11 +73,11 @@ mapview::mapview(x$sectores,
 
 ```{r sectores_cdmx_code}
 # Step 1. load the locality
-locality <- rgeomex::loc_inegi19_mx |>
+locality <- rgeomex::loc_inegi19_mx %>%
     dplyr::filter(CVE_ENT == "09") 
 
 # Step 2. load the blocks
-sectores <- rgeomex::sectores_ine20_mx_a |>
+sectores <- rgeomex::sectores_ine20_mx_a %>%
   sf::st_make_valid()
 
 # Step 3. extract the blocks of locality

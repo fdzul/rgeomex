@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(rgeomex)
+library(tidyverse)
 ```
 
 Para extraer los AGEBs de una localidad urbana de interes se usa la función función **extract_ageb** ó puede extraerse con unas líneas  de código. La función **extract_ageb** tiene dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality). La función regresa una lista con dos elementos, un elemento correspondo a la localidad (locality) y el otro elemento corresponde a los AGEBS (ageb)
@@ -47,11 +48,11 @@ mapview::mapview(cdmx$ageb,
 ## Ejemplo de la Ciudad de México con **código** 
 ```{r cdmx_code}
 # Paso 1. extraer la localidad 
-cdmx_loc <- rgeomex::loc_inegi19_mx |>
+cdmx_loc <- rgeomex::loc_inegi19_mx %>%
     dplyr::filter(CVE_ENT == "09") 
 
 # Paso 2. extraer los agebs 
-cdmx_agebs <- rgeomex::AGEB_inegi_2019_a |>
+cdmx_agebs <- rgeomex::AGEB_inegi_2019_a %>%
   sf::st_make_valid()
 
 cdmx_agebs <- cdmx_agebs[cdmx_loc, ]
