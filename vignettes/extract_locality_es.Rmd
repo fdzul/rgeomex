@@ -8,22 +8,22 @@ vignette: >
 ---
 
 ```{r, include = FALSE}
+mapview::mapviewOptions(leafletWidth = 700, 
+                        leafletHeight = 300)
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
 ```
 
-```{r setup}
+```{r setup, warning=FALSE, message=FALSE, error=FALSE}
 library(rgeomex)
-library(tidyverse)
 ```
 
 
-Para extraer una localidad de interes se usa la funcion extract_locality o la función extract_ageb, la primera extrae los el polígono de la localidad y la segunda función extrae el polígono de la localidad y los AGEBs (Área Geostadística Básica) de la localidad. La primera regresa un objeto sf y la segunda una lista con dos objetos sf.
+Para extraer una localidad de interes se usa la funcion *extract_locality* o la función *extract_ageb*, la primera extrae el polígono de la localidad y la segunda función extrae el polígono de la localidad y los AGEBs (Área Geostadística Básica) de la localidad. La primera regresa un objeto sf y la segunda una lista con dos objetos sf.
 
-
-Para extraer una localidad con la función extract_locality, se usan dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality).
+Para extraer una localidad con la función *extract_locality*, se usan dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality).
 
 ```{r loc_acapulco1}
 acapulco <- rgeomex::extract_locality(cve_edo = "12",
@@ -33,7 +33,7 @@ mapview::mapview(acapulco, legend = FALSE)
 ```
 
 
-Para extraer una localidad con la función extract_ageb, se usan dos argumentos, uno para definir la clave del estado (cve_geo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality).
+Para extraer una localidad con la función *extract_ageb*, se usan dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality).
 
 ```{r loc_acapulco2}
 acapulco_ageb <- rgeomex::extract_ageb(cve_edo = "12",
@@ -42,13 +42,15 @@ acapulco_ageb <- rgeomex::extract_ageb(cve_edo = "12",
 mapview::mapview(acapulco_ageb$locality, legend = FALSE)
 ```
 
-Ambas funciones se pueden usar para todas las localidades urbanas de México, excepto la Ciudad de México para esta se usa otro código para extraer toda la localidad.
+Ambas funciones se pueden usar para todas las localidades urbanas de México, excepto la Ciudad de México para esta localidad se usa otro código para extraer toda la localidad.
 
 ```{r loc_cdmx}
-rgeomex::loc_inegi19_mx %>%
-    dplyr::filter(CVE_ENT == "09") %>%
+rgeomex::loc_inegi19_mx|>
+    dplyr::filter(CVE_ENT == "09")|>
 mapview::mapview(legend = FALSE)
 ```
+
+
 
 
 El argumento de la localidad acepta un vector con los nombres de las localidades que conforman el área metropolitana.
@@ -65,7 +67,7 @@ mapview::mapview(guadalajara, legend = FALSE)
 
 Tambien se puede usar base R para visualizar los bordes de la ciudad o el paquete ggpplot2, tmap o sfmap, etc.
 
-```{r}
+```{r, out.width="100%",out.height="90%", dpi=300}
 ggplot2::ggplot()+
   ggplot2::geom_sf(data = acapulco_ageb$ageb,
                    fill = "gray80",
@@ -75,5 +77,5 @@ ggplot2::ggplot()+
   ggplot2::geom_sf(data = acapulco_ageb$locality,
                    fill = NA,
                    col = "black",
-                   lwd = .5)
+                   lwd = .3)
 ```
