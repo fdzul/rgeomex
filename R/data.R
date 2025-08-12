@@ -284,3 +284,5 @@
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
 #' @details This datasets were published in october 2023.
 "sectores_ine20_mx_c"
+
+
