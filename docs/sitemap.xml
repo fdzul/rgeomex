@@ -1,93 +1,33 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>/articles/extract_agebs_es.html</loc>
-  </url>
-  <url>
-    <loc>/articles/extract_blocks_es.html</loc>
-  </url>
-  <url>
-    <loc>/articles/extract_locality_es.html</loc>
-  </url>
-  <url>
-    <loc>/articles/extract_sectors_es.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/AGEB_inegi_2019_a.html</loc>
-  </url>
-  <url>
-    <loc>/reference/AGEB_inegi_2019_b.html</loc>
-  </url>
-  <url>
-    <loc>/reference/AGEE_inegi19_mx.html</loc>
-  </url>
-  <url>
-    <loc>/reference/AGEM_inegi19_mx.html</loc>
-  </url>
-  <url>
-    <loc>/reference/blocks_ine20_mx_a.html</loc>
-  </url>
-  <url>
-    <loc>/reference/blocks_ine20_mx_b.html</loc>
-  </url>
-  <url>
-    <loc>/reference/blocks_ine20_mx_c.html</loc>
-  </url>
-  <url>
-    <loc>/reference/blocks_ine20_mx_centroid.html</loc>
-  </url>
-  <url>
-    <loc>/reference/blocks_ine20_mx_d.html</loc>
-  </url>
-  <url>
-    <loc>/reference/blocks_ine20_mx_e.html</loc>
-  </url>
-  <url>
-    <loc>/reference/extract_ageb.html</loc>
-  </url>
-  <url>
-    <loc>/reference/extract_blocks.html</loc>
-  </url>
-  <url>
-    <loc>/reference/extract_locality.html</loc>
-  </url>
-  <url>
-    <loc>/reference/extract_sectores.html</loc>
-  </url>
-  <url>
-    <loc>/reference/find_most_similar_string.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/loc_inegi19_mx.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sectores_ine20_mx_a.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sectores_ine20_mx_b.html</loc>
-  </url>
-  <url>
-    <loc>/reference/sectores_ine20_mx_c.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/LICENSE.html</loc></url>
+<url><loc>/articles/extract_agebs_es.html</loc></url>
+<url><loc>/articles/extract_blocks_es.html</loc></url>
+<url><loc>/articles/extract_locality_es.html</loc></url>
+<url><loc>/articles/extract_sectors_es.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/reference/AGEB_inegi_2019_a.html</loc></url>
+<url><loc>/reference/AGEB_inegi_2019_b.html</loc></url>
+<url><loc>/reference/AGEE_inegi19_mx.html</loc></url>
+<url><loc>/reference/AGEM_inegi19_mx.html</loc></url>
+<url><loc>/reference/blocks_ine20_mx_a.html</loc></url>
+<url><loc>/reference/blocks_ine20_mx_b.html</loc></url>
+<url><loc>/reference/blocks_ine20_mx_c.html</loc></url>
+<url><loc>/reference/blocks_ine20_mx_centroid.html</loc></url>
+<url><loc>/reference/blocks_ine20_mx_d.html</loc></url>
+<url><loc>/reference/blocks_ine20_mx_e.html</loc></url>
+<url><loc>/reference/extract_ageb.html</loc></url>
+<url><loc>/reference/extract_blocks.html</loc></url>
+<url><loc>/reference/extract_locality.html</loc></url>
+<url><loc>/reference/extract_sectores.html</loc></url>
+<url><loc>/reference/find_most_similar_string.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/loc_inegi19_mx.html</loc></url>
+<url><loc>/reference/sectores_ine20_mx_a.html</loc></url>
+<url><loc>/reference/sectores_ine20_mx_b.html</loc></url>
+<url><loc>/reference/sectores_ine20_mx_c.html</loc></url>
 </urlset>
+
