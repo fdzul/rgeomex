@@ -21,7 +21,7 @@ library(rgeomex)
 ```
 
 
-Para extraer una localidad de interes se usa la funcion *extract_locality* o la función *extract_ageb*, la primera extrae el polígono de la localidad y la segunda función extrae el polígono de la localidad y los AGEBs (Área Geostadística Básica) de la localidad. La primera regresa un objeto sf y la segunda una lista con dos objetos sf.
+Para extraer una localidad de interés se usa la funcion *extract_locality* o la función *extract_ageb*, la primera extrae el polígono de la localidad y la segunda función extrae el polígono de la localidad y los AGEBs (Área Geostadística Básica) de la localidad. La primera regresa un objeto sf y la segunda una lista con dos objetos sf.
 
 Para extraer una localidad con la función *extract_locality*, se usan dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality).
 

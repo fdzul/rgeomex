@@ -21,7 +21,7 @@ library(rgeomex)
 ```
 
 
-Para extraer los sectores de una localidad urbana de interes se usa la función función **extract_sectores** ó puede extraerse con unas líneas  de código. La función **extract_sectores** tiene dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality). La función regresa una lista con dos elementos, un elemento corresponde a la localidad (locality) y el otro elemento corresponde a las manzanas.
+Para extraer los sectores de una localidad urbana de interés se usa la función función **extract_sectores** ó puede extraerse con unas líneas  de código. La función **extract_sectores** tiene dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality). La función regresa una lista con dos elementos, un elemento corresponde a la localidad (locality) y el otro elemento corresponde a las manzanas.
 
 
 ## Ejemplo de Guadalajara con la función **extract_sectores** 
