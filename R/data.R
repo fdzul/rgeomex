@@ -285,4 +285,24 @@
 #' @details This datasets were published in october 2023.
 "sectores_ine20_mx_c"
 
-
+#' Iter 2020
+#'
+#' A spatial dataset containing of the National Institute of Geography and Statistics INEGI ITER 2020
+#'
+#' @format A sf object with 189432 rows and 10 variables:
+#' \describe{
+#'   \item{entidad}{the ids.}
+#'   \item{nom_ent}{the ids.}
+#'   \item{mun}{is the numeric key of state.}
+#'   \item{nom_mun}{is the numeric key of federal district.}
+#'   \item{nom_loc}{is the numeric key of federal district.}
+#'   \item{loc}{is the numeric key to the Municipality}
+#'   \item{longitud}{is the numeric key to the Sectors}
+#'   \item{latitud}{is numeric the key of tipo}
+#'   \item{altitud}{is the simple feature}
+#'   \item{pobtot}{}
+#'   ...
+#' }
+#' @source \url{https://www.inegi.org.mx/programas/ccpv/2020/#datos_abiertos}
+#' @details This datasets were published in July 26 2021.
+"iter_2020_loc"
