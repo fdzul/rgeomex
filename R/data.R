@@ -307,7 +307,7 @@
 #' @details This datasets were published in July 26 2021.
 "iter_2020_loc"
 
-#' hrl_mx
+#' High risk localities of Mexico
 #'
 #' High risk localities of Mexico
 #'
@@ -323,7 +323,7 @@
 #' @details This database was built using the SIMN annual goals dataset
 "hrl_mx"
 
-#' pua_mx
+#' Priority Urban Areas of Mexico
 #'
 #' Priority Urban Areas of Mexico
 #'
@@ -338,7 +338,7 @@
 #' @details This database was built using data from high-risk locations, called hrl_mx in rgeomex
 "pua_mx"
 
-#' ua_mx
+#' Urban Areas of Mexico
 #'
 #' Urban Areas of Mexico
 #'
