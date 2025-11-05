@@ -288,7 +288,6 @@
 #' Iter 2020
 #'
 #' A spatial dataset containing of the National Institute of Geography and Statistics INEGI ITER 2020
-#'
 #' @format A sf object with 189432 rows and 10 variables:
 #' \describe{
 #'   \item{entidad}{the ids.}
@@ -307,7 +306,7 @@
 #' @details This datasets were published in July 26 2021.
 "iter_2020_loc"
 
-#' High risk localities of Mexico
+#' hrl_mx
 #'
 #' High risk localities of Mexico
 #'
@@ -323,10 +322,9 @@
 #' @details This database was built using the SIMN annual goals dataset
 "hrl_mx"
 
-#' Priority Urban Areas of Mexico
+#' pua_mx
 #'
 #' Priority Urban Areas of Mexico
-#'
 #' @format A sf object with 111 rows and 3 variables:
 #' \describe{
 #'   \item{id}{the ids.}
@@ -338,10 +336,9 @@
 #' @details This database was built using data from high-risk locations, called hrl_mx in rgeomex
 "pua_mx"
 
-#' Urban Areas of Mexico
+#' ua_mx
 #'
 #' Urban Areas of Mexico
-#'
 #' @format A sf object with 658 rows and 2 variables:
 #' \describe{
 #'   \item{id}{the ids.}
