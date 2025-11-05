@@ -306,3 +306,48 @@
 #' @source \url{https://www.inegi.org.mx/programas/ccpv/2020/#datos_abiertos}
 #' @details This datasets were published in July 26 2021.
 "iter_2020_loc"
+
+#' hrl_mx
+#'
+#' High risk localities of Mexico
+#'
+#' @format A sf object with 150 rows and 8 variables:
+#' \describe{
+#'   \item{cvegeo}{the ids.}
+#'   \item{loc}{name of the localitie}
+#'   \item{ambito}{type of localities}
+#'   \item{geometry}{geometry column}
+#'   ...
+#' }
+#' @source \url{https://geosis.mx/Aplicaciones/EntomologiayControl/Home/IndexNacional}
+#' @details This database was built using the SIMN annual goals dataset
+"hrl_mx"
+
+#' pua_mx
+#'
+#' Priority Urban Areas of Mexico
+#'
+#' @format A sf object with 111 rows and 3 variables:
+#' \describe{
+#'   \item{id}{the ids.}
+#'   \item{loc}{name of the priority urban area}
+#'   \item{geometry}{geometry column}
+#'   ...
+#' }
+#' @source \url{https://geosis.mx/Aplicaciones/EntomologiayControl/Home/IndexNacional}
+#' @details This database was built using data from high-risk locations, called hrl_mx in rgeomex
+"pua_mx"
+
+#' ua_mx
+#'
+#' Urban Areas of Mexico
+#'
+#' @format A sf object with 658 rows and 2 variables:
+#' \describe{
+#'   \item{id}{the ids.}
+#'   \item{geometry}{geometry column}
+#'   ...
+#' }
+#' @source \url{https://dataforgood.facebook.com/dfg/tools/globalurbanareas}
+#' @details La base de las area urbana de mexico derivada de la base de las areas global urbanas de meta data for goof of facebook
+"ua_mx"
