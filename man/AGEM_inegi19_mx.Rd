@@ -27,6 +27,6 @@ Polygons of AGEMs from México of the National Institute of Geography and Statis
 A spatial dataset containing of polygon data of AGEM from México
 }
 \details{
-AGEM (Areas GeoEstadisticas Municipales) is stand for Municipality Geostatistical Areas. This datasets were published in september 2019.
+AGEM (Areas GeoEstadisticas Municipales) is stand for Municipality Geostatistical Areas. This datasets were update 2025.
 }
 \keyword{datasets}
