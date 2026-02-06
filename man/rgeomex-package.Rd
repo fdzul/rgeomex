@@ -20,11 +20,11 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com} (\href{https://orcid.org/0000-0002-2085-9141}{ORCID})
+\strong{Maintainer}: Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com} (\href{https://orcid.org/orcid.org/0000-0002-2085-9141}{ORCID})
 
 Other contributors:
 \itemize{
-  \item Fabian Correa-Morales \email{fabiancorrea@msn.com} (\href{https://orcid.org/0000-0002-6193-1242}{ORCID}) [contributor]
+  \item Fabian Correa Morales \email{fabiancorrea@msn.com} (\href{https://orcid.org/orcid.org/0000-0002-6193-1242}{ORCID}) [contributor]
 }
 
 }
