@@ -26,7 +26,6 @@ BugReports: https://github.com/fdzul/rgeomex/issues
 Encoding: UTF-8
 LazyData: true
 LazyDataCompression: true
-RoxygenNote: 7.3.3
 Depends: 
     R (>= 3.5.0)
 Imports: 
@@ -44,3 +43,4 @@ Suggests:
     rmarkdown,
     testthat
 VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0
