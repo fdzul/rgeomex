@@ -9,3 +9,6 @@
 ^\.positai$
 ^\.claude$
 ^_pkgdown\.yml$
+^\.DS_Store$
+^\.RDataTmp$
+^codecov\.yml$
