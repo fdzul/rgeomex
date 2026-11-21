@@ -7,17 +7,17 @@
 \format{
 A sf object with 189432 rows and 10 variables:
 \describe{
-  \item{entidad}{the ids.}
-  \item{nom_ent}{the ids.}
-  \item{mun}{is the numeric key of state.}
-  \item{nom_mun}{is the numeric key of federal district.}
-  \item{nom_loc}{is the numeric key of federal district.}
-  \item{loc}{is the numeric key to the Municipality}
-  \item{longitud}{is the numeric key to the Sectors}
-  \item{latitud}{is numeric the key of tipo}
-  \item{altitud}{is the simple feature}
-  \item{pobtot}{}
-  ...
+\item{entidad}{the ids.}
+\item{nom_ent}{the ids.}
+\item{mun}{is the numeric key of state.}
+\item{nom_mun}{is the numeric key of federal district.}
+\item{nom_loc}{is the numeric key of federal district.}
+\item{loc}{is the numeric key to the Municipality}
+\item{longitud}{is the numeric key to the Sectors}
+\item{latitud}{is numeric the key of tipo}
+\item{altitud}{is the simple feature}
+\item{pobtot}{}
+...
 }
 }
 \source{
@@ -31,5 +31,8 @@ A spatial dataset containing of the National Institute of Geography and Statisti
 }
 \details{
 This datasets were published in July 26 2021.
+}
+\note{
+Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see \code{\link[=rgeomex_load]{rgeomex_load()}}.
 }
 \keyword{datasets}

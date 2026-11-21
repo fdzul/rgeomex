@@ -2,25 +2,30 @@
 % Please edit documentation in R/extract_sectores.R
 \name{extract_sectores}
 \alias{extract_sectores}
-\title{extract_sectores}
+\title{Extract the electoral sections of a locality}
 \usage{
 extract_sectores(locality, cve_edo)
 }
 \arguments{
-\item{locality}{locality target.}
+\item{locality}{name of the locality (INEGI 2019); the most similar name is
+used, so accents and capital letters do not matter. For Mexico City
+(\code{cve_edo = "09"}) the whole city is returned.}
 
-\item{cve_edo}{is a string of the state id.}
+\item{cve_edo}{INEGI key of the state, from \code{"01"} to \code{"32"}.}
 }
 \value{
-a list with two sf objects: a boundary of locality and the sectores of locality target
+a list with two sf objects: \code{locality} (the boundary of the
+locality) and \code{sectores} (its sections).
 }
 \description{
-This function extract the sectores of the locality.
+Extracts the electoral sections (secciones, INE 2020) that intersect the
+boundary of a locality.
 }
 \examples{
-x <- rgeomex::extract_sectores(cve_edo = "31", locality = "Merida")
-mapview::mapview(x$sectores)
-mapview::mapview(x$locality)
+\donttest{
+x <- extract_sectores(cve_edo = "31", locality = "Merida")
+plot(sf::st_geometry(x$sectores))
+}
 }
 \author{
 Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com}.

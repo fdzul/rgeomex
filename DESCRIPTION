@@ -1,44 +1,48 @@
 Package: rgeomex
 Type: Package
-Title: The rgeomex provides the polygon data of INEGI 2019 and INE 2020
-Version: 0.1.0
-Authors@R: c(person(given = "Felipe Antonio",
-                    family = "Dzul Manzanilla",
-                    role = c("aut", "cre"),
-                    email = "felipe.dzul.m@gmail.com",
-                    comment = c(ORCID = "orcid.org/0000-0002-2085-9141")),
-            person(given = "Emmanuel",
-                    family = "Morales García",
-                    role = "aut",
-                    email = "emmorales@uv.mx",
-                    comment = c(ORCID = "0000-0002-6837-9227")),
-            person(given = "Fabian",
-                    family = "Correa Morales",
-                    role = "ctb",
-                    email = "fabiancorrea@msn.com",
-                    comment = c(ORCID = "orcid.org/0000-0002-6193-1242")))
-Description: the rgeomex package provides spatial dataset (areal data) available and published homepage of INE and INEGI.
+Title: Geographic Boundaries of Mexico from INEGI and INE
+Version: 0.2.0
+Authors@R: c(
+    person("Felipe Antonio", "Dzul Manzanilla", , "felipe.dzul.m@gmail.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-2085-9141")),
+    person("Fabian", "Correa-Morales", , "fabiancorrea@msn.com", role = "aut",
+           comment = c(ORCID = "0000-0002-6193-1242")),
+    person("Emmanuel", "Morales García", , "emmorales@uv.mx", role = "aut",
+           comment = c(ORCID = "0000-0002-6837-9227")),
+    person("Cecilia", "Cruz López", , "ceccruz@uv.mx", role = "aut",
+           comment = c(ORCID = "0000-0002-9156-5669")),
+    person("Héctor", "Gómez-Dantés", , "hector.gomez@insp.mx", role = "aut",
+           comment = c(ORCID = "0000-0002-2025-3641"))
+  )
+Description: Polygons of Mexico from INEGI 2019 and INE 2020 at several
+    resolutions (states, municipalities, localities, urban AGEB, blocks and
+    electoral sections), and functions to extract the AGEB, blocks and
+    sections of a locality. The datasets are GeoParquet files that are
+    downloaded the first time they are used and kept in a local cache.
 License: MIT + file LICENSE
 URL: https://github.com/fdzul/rgeomex, https://fdzul.github.io/rgeomex/
 BugReports: https://github.com/fdzul/rgeomex/issues
-Encoding: UTF-8
-LazyData: true
-LazyDataCompression: true
 Depends:
-    R (>= 3.5.0)
+    R (>= 4.1.0)
 Imports:
-    purrr,
-    lifecycle,
-    sf,
     dplyr,
-    ggplot2,
-    mapview,
-    magrittr
-RdMacros: lifecycle
+    jsonlite,
+    nanoparquet,
+    purrr,
+    sf,
+    stats,
+    tools,
+    utils
 Suggests:
-    covr,
+    ggplot2,
     knitr,
+    mapview,
+    openssl,
     rmarkdown,
-    testthat
+    testthat (>= 3.0.0),
+    withr
 VignetteBuilder: knitr
-Config/roxygen2/version: 8.0.0
+Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.0

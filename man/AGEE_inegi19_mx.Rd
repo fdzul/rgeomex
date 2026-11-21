@@ -8,11 +8,11 @@ A spatial dataset containing of polygon data of AGEE from México}
 \format{
 A sf object with 32 rows and 4 variables:
 \describe{
-  \item{CVEGEO}{the numeric key. The key included the CVE_ENT.}
-  \item{CVE_ENT}{is the numeric key for each state.}
-  \item{NOMGEO}{is a string value. Its the name of state.}
-  \item{geometry}{simple feature.}
-  ...
+\item{CVEGEO}{the numeric key. The key included the CVE_ENT.}
+\item{CVE_ENT}{is the numeric key for each state.}
+\item{NOMGEO}{is a string value. Its the name of state.}
+\item{geometry}{simple feature.}
+...
 }
 }
 \source{
@@ -27,5 +27,8 @@ A spatial dataset containing of polygon data of AGEE from México
 }
 \details{
 AGEE (Areas GeoEstadisticas Estatales) is stand for State Geostatistical Areas. This datasets were published in september 2019.
+}
+\note{
+Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see \code{\link[=rgeomex_load]{rgeomex_load()}}.
 }
 \keyword{datasets}

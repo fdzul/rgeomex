@@ -12,3 +12,9 @@
 ^\.DS_Store$
 ^\.RDataTmp$
 ^codecov\.yml$
+^vignettes/.*\.Rmd\.orig$
+^vignettes/precompile\.R$
+^README\.es\.Rmd$
+^NEWS\.es\.md$
+^README\.Rmd$
+^README\.es\.md$

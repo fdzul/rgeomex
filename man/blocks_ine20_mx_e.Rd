@@ -7,16 +7,16 @@
 \format{
 A sf object with 2278337 rows and 19 variables:
 \describe{
-  \item{gid}{the ids.}
-  \item{id}{the ids.}
-  \item{entidad}{is the numeric key of state.}
-  \item{distrito}{is the numeric key of federal district.}
-  \item{municipio}{is the numeric key to the Municipality}
-  \item{seccion}{is the numeric key to the Sectors}
-  \item{localidad}{is numeric the key of locality}
-  \item{manzana}{is the numeric key of blocks}
-  \item{geometry}{simple feature.}
-  ...
+\item{gid}{the ids.}
+\item{id}{the ids.}
+\item{entidad}{is the numeric key of state.}
+\item{distrito}{is the numeric key of federal district.}
+\item{municipio}{is the numeric key to the Municipality}
+\item{seccion}{is the numeric key to the Sectors}
+\item{localidad}{is numeric the key of locality}
+\item{manzana}{is the numeric key of blocks}
+\item{geometry}{simple feature.}
+...
 }
 }
 \source{
@@ -30,5 +30,8 @@ A spatial dataset containing of polygon data of blocks from México
 }
 \details{
 This datasets were published in october 2020.
+}
+\note{
+Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see \code{\link[=rgeomex_load]{rgeomex_load()}}.
 }
 \keyword{datasets}

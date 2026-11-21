@@ -17,8 +17,12 @@
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
 #' @details This datasets were published in october 2020.
-"blocks_ine20_mx_a"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name blocks_ine20_mx_a
+#' @docType data
+#' @usage blocks_ine20_mx_a
+#' @keywords datasets
+NULL
 #' Polygons of blocks from México of the National Electoral Institute 2020
 #'
 #' A spatial dataset containing of polygon data of blocks from México
@@ -38,8 +42,12 @@
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
 #' @details This datasets were published in october 2020.
-"blocks_ine20_mx_b"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name blocks_ine20_mx_b
+#' @docType data
+#' @usage blocks_ine20_mx_b
+#' @keywords datasets
+NULL
 #' Polygons of blocks from México of the National Electoral Institute 2020
 #'
 #' A spatial dataset containing of polygon data of blocks from México
@@ -59,8 +67,12 @@
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
 #' @details This datasets were published in october 2020.
-"blocks_ine20_mx_c"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name blocks_ine20_mx_c
+#' @docType data
+#' @usage blocks_ine20_mx_c
+#' @keywords datasets
+NULL
 #' Polygons of blocks from México of the National Electoral Institute 2020
 #'
 #' A spatial dataset containing of polygon data of blocks from México
@@ -80,8 +92,12 @@
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
 #' @details This datasets were published in october 2020.
-"blocks_ine20_mx_d"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name blocks_ine20_mx_d
+#' @docType data
+#' @usage blocks_ine20_mx_d
+#' @keywords datasets
+NULL
 #' Polygons of blocks from México of the National Electoral Institute 2020
 #'
 #' A spatial dataset containing of polygon data of blocks from México
@@ -101,8 +117,12 @@
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
 #' @details This datasets were published in october 2020.
-"blocks_ine20_mx_e"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name blocks_ine20_mx_e
+#' @docType data
+#' @usage blocks_ine20_mx_e
+#' @keywords datasets
+NULL
 #' Polygons of AGEBs from México of the National Institute of Geography and Statistics 2019
 #'
 #' A spatial dataset containing of polygon data of AGEBs from México
@@ -122,8 +142,12 @@
 #' }
 #' @source \url{https://www.inegi.org.mx/temas/mg/#Descargas}
 #' @details AGEB (Areas GeoEstadisticas Basicas) is stand for basic geostatistical areas. This datasets were published in september 2019.
-"AGEB_inegi_2019_a"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name AGEB_inegi_2019_a
+#' @docType data
+#' @usage AGEB_inegi_2019_a
+#' @keywords datasets
+NULL
 #' Polygons of AGEBs from México of the National Institute of Geography and Statistics 2019
 #'
 #' A spatial dataset containing of polygon data of AGEBs from México
@@ -143,9 +167,12 @@
 #' }
 #' @source \url{https://www.inegi.org.mx/temas/mg/#Descargas}
 #' @details AGEB (Areas GeoEstadisticas Basicas) is stand for basic geostatistical areas. This datasets were published in september 2019.
-"AGEB_inegi_2019_b"
-
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name AGEB_inegi_2019_b
+#' @docType data
+#' @usage AGEB_inegi_2019_b
+#' @keywords datasets
+NULL
 #' Polygons of AGEEs from México of the National Institute of Geography and Statistics 2019
 #
 #' A spatial dataset containing of polygon data of AGEE from México
@@ -160,8 +187,12 @@
 #' }
 #' @source \url{https://www.inegi.org.mx/temas/mg/#Descargas}
 #' @details AGEE (Areas GeoEstadisticas Estatales) is stand for State Geostatistical Areas. This datasets were published in september 2019.
-"AGEE_inegi19_mx"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name AGEE_inegi19_mx
+#' @docType data
+#' @usage AGEE_inegi19_mx
+#' @keywords datasets
+NULL
 #' Polygons of AGEMs from México of the National Institute of Geography and Statistics 2019
 #
 #' A spatial dataset containing of polygon data of AGEM from México
@@ -177,8 +208,12 @@
 #' }
 #' @source \url{https://www.inegi.org.mx/temas/mg/#Descargas}
 #' @details AGEM (Areas GeoEstadisticas Municipales) is stand for Municipality Geostatistical Areas. This datasets were update 2025.
-"AGEM_inegi19_mx"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name AGEM_inegi19_mx
+#' @docType data
+#' @usage AGEM_inegi19_mx
+#' @keywords datasets
+NULL
 #' Polygons of AGEMs from México of the National Institute of Geography and Statistics 2025
 #
 #' A spatial dataset containing of polygon data of AGEM from México
@@ -194,8 +229,12 @@
 #' }
 #' @source \url{https://www.inegi.org.mx/temas/mg/#Descargas}
 #' @details AGEM (Areas GeoEstadisticas Municipales) is stand for Municipality Geostatistical Areas.
-"AGEM_inegi25_mx"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name AGEM_inegi25_mx
+#' @docType data
+#' @usage AGEM_inegi25_mx
+#' @keywords datasets
+NULL
 #' Polygons of localities from México of the National Institute of Geography and Statistics 2019
 #
 #' A spatial dataset containing of polygon data of localities from México
@@ -213,8 +252,12 @@
 #' }
 #' @source \url{https://www.inegi.org.mx/temas/mg/#Descargas}
 #' @details This datasets were published in september 2019.
-"loc_inegi19_mx"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name loc_inegi19_mx
+#' @docType data
+#' @usage loc_inegi19_mx
+#' @keywords datasets
+NULL
 #' Blocks centroids from México of the National Electoral Institute 2020
 #
 #' A dataset containing of centroid data of blocks from México
@@ -228,8 +271,12 @@
 #'   ...
 #' }
 #' @source [INE](https://pautas.ine.mx/transparencia/mapas/)
-"blocks_ine20_mx_centroid"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name blocks_ine20_mx_centroid
+#' @docType data
+#' @usage blocks_ine20_mx_centroid
+#' @keywords datasets
+NULL
 #' Polygons of sectores from México of the National Electoral Institute 2020
 #'
 #' A spatial dataset containing of polygon data of sectores from México
@@ -252,8 +299,12 @@
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
 #' @details This datasets were published in october 2023.
-"sectores_ine20_mx_a"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name sectores_ine20_mx_a
+#' @docType data
+#' @usage sectores_ine20_mx_a
+#' @keywords datasets
+NULL
 #' Polygons of sectores from México of the National Electoral Institute 2020
 #'
 #' A spatial dataset containing of polygon data of sectores from México
@@ -276,8 +327,12 @@
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
 #' @details This datasets were published in october 2023.
-"sectores_ine20_mx_b"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name sectores_ine20_mx_b
+#' @docType data
+#' @usage sectores_ine20_mx_b
+#' @keywords datasets
+NULL
 #' Polygons of sectores from México of the National Electoral Institute 2020
 #'
 #' A spatial dataset containing of polygon data of sectores from México
@@ -300,8 +355,12 @@
 #' }
 #' @source \url{https://pautas.ine.mx/transparencia/mapas/}
 #' @details This datasets were published in october 2023.
-"sectores_ine20_mx_c"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name sectores_ine20_mx_c
+#' @docType data
+#' @usage sectores_ine20_mx_c
+#' @keywords datasets
+NULL
 #' Iter 2020
 #'
 #' A spatial dataset containing of the National Institute of Geography and Statistics INEGI ITER 2020
@@ -321,8 +380,12 @@
 #' }
 #' @source \url{https://www.inegi.org.mx/programas/ccpv/2020/#datos_abiertos}
 #' @details This datasets were published in July 26 2021.
-"iter_2020_loc"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name iter_2020_loc
+#' @docType data
+#' @usage iter_2020_loc
+#' @keywords datasets
+NULL
 #' hrl_mx
 #'
 #' High risk localities of Mexico
@@ -337,8 +400,12 @@
 #' }
 #' @source \url{https://geosis.mx/Aplicaciones/EntomologiayControl/Home/IndexNacional}
 #' @details This database was built using the SIMN annual goals dataset
-"hrl_mx"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name hrl_mx
+#' @docType data
+#' @usage hrl_mx
+#' @keywords datasets
+NULL
 #' pua_mx
 #'
 #' Priority Urban Areas of Mexico
@@ -351,8 +418,12 @@
 #' }
 #' @source \url{https://geosis.mx/Aplicaciones/EntomologiayControl/Home/IndexNacional}
 #' @details This database was built using data from high-risk locations, called hrl_mx in rgeomex
-"pua_mx"
-
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name pua_mx
+#' @docType data
+#' @usage pua_mx
+#' @keywords datasets
+NULL
 #' ua_mx
 #'
 #' Urban Areas of Mexico
@@ -364,4 +435,9 @@
 #' }
 #' @source \url{https://dataforgood.facebook.com/dfg/tools/globalurbanareas}
 #' @details La base de las area urbana de mexico derivada de la base de las areas global urbanas de meta data for goof of facebook
-"ua_mx"
+#' @note Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see [rgeomex_load()].
+#' @name ua_mx
+#' @docType data
+#' @usage ua_mx
+#' @keywords datasets
+NULL

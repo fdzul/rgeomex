@@ -7,19 +7,19 @@
 \format{
 A sf object with 27428 rows and 7 variables:
 \describe{
-  \item{gid}{the ids.}
-  \item{id}{the ids.}
-  \item{entidad}{is the numeric key of state.}
-  \item{distrito}{is the numeric key of federal district.}
-  \item{distrito_l}{is the numeric key of federal district.}
-  \item{municipio}{is the numeric key to the Municipality}
-  \item{seccion}{is the numeric key to the Sectors}
-  \item{tipo}{is numeric the key of tipo}
-  \item{geometry1_}{is the simple feature}
-  \item{ln}{}
-  \item{pad}{}
-  \item{geometry}{simple feature.}
-  ...
+\item{gid}{the ids.}
+\item{id}{the ids.}
+\item{entidad}{is the numeric key of state.}
+\item{distrito}{is the numeric key of federal district.}
+\item{distrito_l}{is the numeric key of federal district.}
+\item{municipio}{is the numeric key to the Municipality}
+\item{seccion}{is the numeric key to the Sectors}
+\item{tipo}{is numeric the key of tipo}
+\item{geometry1_}{is the simple feature}
+\item{ln}{}
+\item{pad}{}
+\item{geometry}{simple feature.}
+...
 }
 }
 \source{
@@ -33,5 +33,8 @@ A spatial dataset containing of polygon data of sectores from México
 }
 \details{
 This datasets were published in october 2023.
+}
+\note{
+Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see \code{\link[=rgeomex_load]{rgeomex_load()}}.
 }
 \keyword{datasets}

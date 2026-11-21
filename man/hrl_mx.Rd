@@ -7,11 +7,11 @@
 \format{
 A sf object with 150 rows and 8 variables:
 \describe{
-  \item{cvegeo}{the ids.}
-  \item{loc}{name of the localitie}
-  \item{ambito}{type of localities}
-  \item{geometry}{geometry column}
-  ...
+\item{cvegeo}{the ids.}
+\item{loc}{name of the localitie}
+\item{ambito}{type of localities}
+\item{geometry}{geometry column}
+...
 }
 }
 \source{
@@ -25,5 +25,8 @@ High risk localities of Mexico
 }
 \details{
 This database was built using the SIMN annual goals dataset
+}
+\note{
+Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see \code{\link[=rgeomex_load]{rgeomex_load()}}.
 }
 \keyword{datasets}

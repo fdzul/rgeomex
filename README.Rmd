@@ -5,133 +5,78 @@ output: github_document
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", eval = FALSE)
 ```
 
-# **rgeomex**
-[![Build Status](https://travis-ci.com/fdzul/rgeomex.svg?branch=main)](https://travis-ci.com/fdzul/rgeomex) 
-[![HitCount](https://hits.dwyl.com/fdzul/fdzul/rgeomex.svg?style=flat-square)](http://hits.dwyl.com/fdzul/fdzul/rgeomex)
-![GitHub all releases](https://img.shields.io/github/downloads/fdzul/rgeomex/total)
-[![Codecov test coverage](https://codecov.io/gh/fdzul/rgeomex/branch/master/graph/badge.svg)](https://codecov.io/gh/fdzul/rgeomex?branch=master)
+# rgeomex <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
-<img align="center" src="man/figures/logo.png" alt="logo" width="140">
+<!-- badges: start -->
+[![r-universe](https://fdzul.r-universe.dev/badges/rgeomex)](https://fdzul.r-universe.dev/rgeomex)
+[![R-CMD-check](https://github.com/fdzul/rgeomex/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/fdzul/rgeomex/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
-**rgeomex** is a package developed in the [CENAPRECE](https://www.gob.mx/salud/cenaprece) dengue prevention and control program in collaboration with [INDRE](https://www.gob.mx/salud/acciones-y-programas/instituto-de-diagnostico-y-referencia-epidemiologicos-mision-vision-y-politica-de-calidad-181639?state=published), & the Yucatan state.
+**English** | [Español](README.es.md)
 
-## **overview**
+rgeomex provides the geographic boundaries of Mexico from [INEGI](https://www.inegi.org.mx/temas/mg) and [INE](https://pautas.ine.mx/transparencia/mapas/) at several resolutions (states, municipalities, localities, urban AGEB, blocks and electoral sections), and functions to extract the AGEB, blocks and sections of a locality.
 
-Geographical datasets from the [INEGI](https://www.inegi.org.mx/temas/mg) and [INE](https://pautas.ine.mx/transparencia/mapas/) are available in the R package **rgeomex**. Geographical dataset at various resolutions (states, municipalities, localities, agebs, blocks, sectors, and neighborhoods) constitute  the majority of the package's content.
+rgeomex is part of the [dengueverse](https://fdzul.github.io/dengueverse/). Its Python version is [rgeomex-py](https://fdzul.github.io/rgeomex-py/); both use the same files.
 
-**rgeomex** constitutes a transversal package of the **ETVerse** and **IVAverse** initiatives. [rgeomex](https://fdzul.github.io/rgeomex/), together with  *denepikit*, *denhotspots*, [deneggs](https://fdzul.github.io/deneggs/), and *dencontrol* packages, constitute a universe of packages that make up the dengueverse of the dengue prevention and control program in Mexico.
-
-The package has six spatial datasets and functions for extract the AGEBs (extract_ageb), blocks (extract_blocks), sectores (extract_sectores) & localities (extract_locality).
-
-- **`AGEB_inegi_2019_mx`** spatial dataset containing polygon data of AGEBs (Area Geostadística Basica) from Mexico (INEGI 2019). The urban AGEBs are split in two files.
-  
-```{r agebs, echo=FALSE, dpi = 300}
-tibble::tibble(dataset = c("rgeomex::AGEB_inegi_2019_a",
-                           "rgeomex::AGEB_inegi_2019_b"),
-               id_states = c("01-16", "17-32")) |>
-  gt::gt()
-```
-
-- **`blocks_ine20_mx`** spatial dataset containing polygon data of blocks from Mexico (INE 2020). The blocks of the urban cities are split in five files from a to e. 
-  
-```{r blocks, echo=FALSE, dpi = 300}
-tibble::tibble(dataset = c("blocks_ine20_mx_a",
-                           "blocks_ine20_mx_b",
-                           "blocks_ine20_mx_c",
-                           "blocks_ine20_mx_d",
-                           "blocks_ine20_mx_e"),
-               id_states = c("1-10", "11-14", 
-                             "15-19", "20-25",
-                             "26-32")) |>
-  gt::gt()
-```
- 
-- **`sectores_ine20_mx`** spatial dataset containing polygon data sectores INE from Mexico.
-  
-```{r sectores, echo=FALSE, dpi = 300}
-tibble::tibble(dataset = c("sectores_ine20_mx_a",
-                           "sectores_ine20_mx_b",
-                           "sectores_ine20_mx_c"),
-               id_states = c("01-10", "11-20", "21-32")) |>
-  gt::gt()
-```
-
-- **`loc_inegi19_mx`** spatial dataset containing polygon data of localities from Mexico (INEGI 2019).
-  
-- **`AGEE_inegi19_mx`** spatial dataset containing polygon data of AGEE (Area Geostadística Estatal) from Mexico (INEGI 2019).
-  
-- **`AGEM_inegi19_mx`** spatial dataset containing polygon data of AGEM (Area Geostadística Municipal) from Mexico (INEGI 2019).
-
-
-This package is currently available only in R, and we hope that it will soon become available in Python.
-
-## Installation R
-
-You can install the released version of rgeomex from [CRAN](https://CRAN.R-project.org) with:
+## Installation
 
 ``` r
-install.packages("rgeomex")
-```
+install.packages("rgeomex",
+                 repos = c("https://fdzul.r-universe.dev",
+                           "https://cloud.r-project.org"))
 
-And the development version from [GitHub](https://github.com/) with:
-
-``` r
-devtools::install_github("fdzul/rgeomex")
-```
-or
-
-``` r
+# or from GitHub
+# install.packages("pak")
 pak::pkg_install("fdzul/rgeomex")
 ```
 
-## Authors
+## Data
 
-* **Felipe Antonio Dzul Manzanilla** -**https://github.com/fdzul** - Packages developed in github:
+Since version 0.2.0 the datasets are not shipped inside the package. They are GeoParquet files that are downloaded the first time they are used and kept in a local cache (`rgeomex_cache_dir()`), so the installation is small and only the states you use are downloaded. The names of the previous versions still work (for example `rgeomex::AGEM_inegi19_mx`).
 
-  1) [denhotspots](https://github.com/fdzul/denhotspots). 
-  2) [boldenr](https://github.com/fdzul/boldenr). 
-  3) [dendata](https://github.com/fdzul/dendata).
-  4) [deneggs](https://github.com/fdzul/deneggs).
+| Dataset | Content | Source |
+|:--|:--|:--|
+| `AGEE_inegi19_mx` | states | INEGI 2019 |
+| `AGEM_inegi19_mx`, `AGEM_inegi25_mx` | municipalities | INEGI 2019, 2025 |
+| `loc_inegi19_mx` | urban localities | INEGI 2019 |
+| `AGEB_inegi_2019` | urban AGEB (by state) | INEGI 2019 |
+| `blocks_ine20_mx` | blocks (by state) | INE 2020 |
+| `blocks_ine20_mx_centroid` | centroids of the blocks (by state) | INE 2020 |
+| `sectores_ine20_mx` | electoral sections (by state) | INE 2020 |
+| `hrl_mx`, `pua_mx`, `ua_mx` | other urban boundaries | INEGI |
+| `iter_2020_loc` | population of the localities (table) | INEGI 2020 |
 
-* **Fabián Correa Morales**
-* **Luis Hernández Herrera**
-* **Arturo Baez**
-* **Evaristo Morales Ríos**
-* **Heron Huerta**
-* **Dorothy Dzul-Cuevas**
+## Example
 
+```{r example}
+library(rgeomex)
 
+# boundary of a locality
+merida <- extract_locality(cve_edo = "31", locality = "Merida")
 
-See also the list of [contributors](https://github.com/fdzul/geomex/contributors) who participated in this project.
+# AGEB, blocks and electoral sections of a locality
+ageb     <- extract_ageb(cve_edo = "31", locality = "Merida")
+blocks   <- extract_blocks(cve_edo = "31", locality = "Merida")
+sections <- extract_sectores(cve_edo = "31", locality = "Merida")
+
+# a whole dataset, or the rows of some states
+rgeomex_datasets()
+yucatan <- rgeomex_load("AGEM_inegi19_mx", cve_edo = "31")
+```
+
+To work offline, or to share the files among several users, set the environment variable `RGEOMEX_DATA_DIR` to a folder that has the files.
 
 ## Credits
-Original shapefiles are created by official government institutions ([INEGI](https://www.inegi.org.mx/temas/mg) & [INE](https://pautas.ine.mx/transparencia/mapas/)).
+
+The original shapefiles are created by official government institutions ([INEGI](https://www.inegi.org.mx/temas/mg) and [INE](https://pautas.ine.mx/transparencia/mapas/)).
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+MIT; see [LICENSE.md](LICENSE.md).
 
+## Help
 
-## Inspiration
-
-The package was inspired by the need to contribute toward making decisions in the dengue prevention and control program, specifically through the identification of dengue vector hotspots and use the entomological information generated by the program.
-
-## Getting help
-
-If you encounter a clear bug, please file a minimal reproducible example
-on [github](https://github.com/fdzul/rgeomex/issues). For questions
-and other discussion, feel free to contact me (felipe.dzul.m@gmail.com)
-
------
-
-Please note that this project is released with a [Contributor Code of
-Conduct](https://dplyr.tidyverse.org/CODE_OF_CONDUCT). By participating
-in this project you agree to abide by its terms.
+If you find a bug, please file a minimal reproducible example on [GitHub](https://github.com/fdzul/rgeomex/issues). For questions, contact <felipe.dzul.m@gmail.com>.

@@ -1,0 +1,84 @@
+---
+title: "Extraer secciones electorales"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Extraer secciones electorales}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<!-- Este archivo se genera desde extract_sectors_es.Rmd.orig (ver vignettes/precompile.R) -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.path = "figures/extract_sectors_es-",
+                      fig.width = 7, fig.height = 5, dpi = 96, out.width = "100%",
+                      message = FALSE, warning = FALSE)
+```
+
+```{r setup}
+library(rgeomex)
+library(ggplot2)
+```
+
+`extract_sectores()` extrae las secciones electorales que intersectan el polígono de una localidad. Tiene dos argumentos: la clave del estado (`cve_edo`) y el nombre de la localidad (`locality`). Regresa una lista con dos objetos sf: `locality` (el polígono de la localidad) y `sectores`.
+
+Solo se descarga el archivo del estado que se pide.
+
+## Mérida
+
+```{r merida}
+merida <- extract_sectores(cve_edo = "31", locality = "Merida")
+nrow(merida$sectores)
+```
+
+```{r merida_map}
+ggplot() +
+  geom_sf(data = merida$sectores, fill = "#E01A59", col = "white", lwd = 0.05) +
+  geom_sf(data = merida$locality, fill = NA, col = "black", lwd = 0.3) +
+  theme_void()
+```
+
+## Guadalajara
+
+```{r guadalajara}
+gdl <- extract_sectores(cve_edo = "14",
+                  locality = c("Guadalajara", "Zapopan", "Tonalá", "Tlaquepaque"))
+nrow(gdl$sectores)
+```
+
+```{r guadalajara_map}
+ggplot() +
+  geom_sf(data = gdl$sectores, fill = "#E01A59", col = "white", lwd = 0.05) +
+  geom_sf(data = gdl$locality, fill = NA, col = "black", lwd = 0.3) +
+  theme_void()
+```
+
+## Ciudad de México
+
+```{r cdmx}
+cdmx <- extract_sectores(cve_edo = "09", locality = "cdmx")
+nrow(cdmx$sectores)
+```
+
+```{r cdmx_map}
+ggplot() +
+  geom_sf(data = cdmx$sectores, fill = "#E01A59", col = "white", lwd = 0.05) +
+  theme_void()
+```
+
+## Con código
+
+Los mismos pasos que hace la función:
+
+```{r code}
+# 1. la localidad
+loc <- extract_locality(cve_edo = "31", locality = "Merida")
+
+# 2. la base del estado
+x <- rgeomex_load("sectores_ine20_mx", cve_edo = "31") |>
+  sf::st_make_valid()
+
+# 3. lo que intersecta la localidad
+x <- x[loc, ]
+nrow(x)
+```

@@ -1,49 +1,20 @@
-#' extract_blocks
+#' Extract the blocks of a locality
 #'
-#' This function extract the blocks of the locality.
+#' Extracts the blocks (manzanas, INE 2020) that intersect the boundary of a
+#' locality.
 #'
-#' @param locality locality target.
-#' @param cve_edo is a string of the state id.
+#' @inheritParams extract_locality
 #'
-#' @return a list with two sf objects: a locality limit and the blocks of locality target
+#' @return a list with two sf objects: `locality` (the boundary of the
+#'   locality) and `block` (its blocks).
 #' @export
 #' @author Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com}.
 #'
 #' @examples
-#' x <- rgeomex::extract_blocks(cve_edo = "31", locality = "Merida")
-#' mapview::mapview(x$block)
-#' mapview::mapview(x$locality)
+#' \donttest{
+#' x <- extract_blocks(cve_edo = "31", locality = "Merida")
+#' plot(sf::st_geometry(x$block))
+#' }
 extract_blocks <- function(locality, cve_edo){
-
-    if(cve_edo %in% c("09")){
-        loc <- rgeomex::loc_inegi19_mx |>
-            dplyr::filter(CVE_ENT == cve_edo)
-    } else{
-        loc <- rgeomex::extract_locality(cve_edo = cve_edo,
-                                         locality = locality)
-    }
-
-    cve_edo <- as.numeric(cve_edo)
-
-    if(cve_edo %in% c(1:10)){
-        y <- rgeomex::blocks_ine20_mx_a |>
-            sf::st_make_valid()}
-    if(cve_edo %in% c(11:14)){y <- rgeomex::blocks_ine20_mx_b |>
-        sf::st_make_valid()}
-    if(cve_edo %in% c(15:19)){y <- rgeomex::blocks_ine20_mx_c |>
-        sf::st_make_valid()}
-    if(cve_edo %in% c(20:25)){y <- rgeomex::blocks_ine20_mx_d |>
-        sf::st_make_valid()}
-    if(cve_edo %in% c(26:32)){y <- rgeomex::blocks_ine20_mx_e |>
-        sf::st_make_valid()}
-
-    y <- y[loc,]
-
-    multi_return <- function() {
-        my_list <- list("locality" = loc,
-                        "block" = y)
-        return(my_list)
-    }
-    multi_return()
-
+    .extract("blocks_ine20_mx", locality, cve_edo, "block")
 }

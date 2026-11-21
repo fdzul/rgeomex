@@ -1,0 +1,84 @@
+---
+title: "Extraer AGEB"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Extraer AGEB}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<!-- Este archivo se genera desde extract_ageb_es.Rmd.orig (ver vignettes/precompile.R) -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.path = "figures/extract_ageb_es-",
+                      fig.width = 7, fig.height = 5, dpi = 96, out.width = "100%",
+                      message = FALSE, warning = FALSE)
+```
+
+```{r setup}
+library(rgeomex)
+library(ggplot2)
+```
+
+`extract_ageb()` extrae los AGEB que intersectan el polígono de una localidad. Tiene dos argumentos: la clave del estado (`cve_edo`) y el nombre de la localidad (`locality`). Regresa una lista con dos objetos sf: `locality` (el polígono de la localidad) y `ageb`.
+
+Solo se descarga el archivo del estado que se pide.
+
+## Mérida
+
+```{r merida}
+merida <- extract_ageb(cve_edo = "31", locality = "Merida")
+nrow(merida$ageb)
+```
+
+```{r merida_map}
+ggplot() +
+  geom_sf(data = merida$ageb, fill = "#E01A59", col = "white", lwd = 0.05) +
+  geom_sf(data = merida$locality, fill = NA, col = "black", lwd = 0.3) +
+  theme_void()
+```
+
+## Guadalajara
+
+```{r guadalajara}
+gdl <- extract_ageb(cve_edo = "14",
+                  locality = c("Guadalajara", "Zapopan", "Tonalá", "Tlaquepaque"))
+nrow(gdl$ageb)
+```
+
+```{r guadalajara_map}
+ggplot() +
+  geom_sf(data = gdl$ageb, fill = "#E01A59", col = "white", lwd = 0.05) +
+  geom_sf(data = gdl$locality, fill = NA, col = "black", lwd = 0.3) +
+  theme_void()
+```
+
+## Ciudad de México
+
+```{r cdmx}
+cdmx <- extract_ageb(cve_edo = "09", locality = "cdmx")
+nrow(cdmx$ageb)
+```
+
+```{r cdmx_map}
+ggplot() +
+  geom_sf(data = cdmx$ageb, fill = "#E01A59", col = "white", lwd = 0.05) +
+  theme_void()
+```
+
+## Con código
+
+Los mismos pasos que hace la función:
+
+```{r code}
+# 1. la localidad
+loc <- extract_locality(cve_edo = "31", locality = "Merida")
+
+# 2. la base del estado
+x <- rgeomex_load("AGEB_inegi_2019", cve_edo = "31") |>
+  sf::st_make_valid()
+
+# 3. lo que intersecta la localidad
+x <- x[loc, ]
+nrow(x)
+```

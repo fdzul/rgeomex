@@ -1,44 +1,20 @@
-#' extract_ageb
+#' Extract the AGEB of a locality
 #'
-#' This function extract the AGEB of the locality.
+#' Extracts the urban AGEB (INEGI 2019) that intersect the boundary of a
+#' locality.
 #'
-#' @param locality locality target.
-#' @param cve_edo is a string of the state id.
+#' @inheritParams extract_locality
 #'
-#' @return a list with two sf objects: a locality limit and the agebs of locality target
+#' @return a list with two sf objects: `locality` (the boundary of the
+#'   locality) and `ageb` (its AGEB).
 #' @export
 #' @author Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com}.
 #'
 #' @examples
-#' x <- rgeomex::extract_ageb(cve_edo = "31", locality = "Merida")
-#' mapview::mapview(x$ageb)
-#' mapview::mapview(x$locality)
+#' \donttest{
+#' x <- extract_ageb(cve_edo = "31", locality = "Merida")
+#' plot(sf::st_geometry(x$ageb))
+#' }
 extract_ageb <- function(locality, cve_edo){
-
-
-    if(cve_edo %in% c("09")){
-        loc <- rgeomex::loc_inegi19_mx |>
-            dplyr::filter(CVE_ENT == cve_edo)
-    } else{
-        loc <- rgeomex::extract_locality(cve_edo = cve_edo,
-                                         locality = locality)
-    }
-
-    cve_edo <- as.numeric(cve_edo)
-
-    if(cve_edo %in% c(1:16)){
-        y <- rgeomex::AGEB_inegi_2019_a |> sf::st_make_valid()}
-    if(cve_edo %in% c(17:32)){
-        y <- rgeomex::AGEB_inegi_2019_b |> sf::st_make_valid()}
-
-
-    y <- y[loc,]
-
-    multi_return <- function() {
-        my_list <- list("locality" = loc,
-                        "ageb" = y)
-        return(my_list)
-    }
-    multi_return()
-
+    .extract("AGEB_inegi_2019", locality, cve_edo, "ageb")
 }

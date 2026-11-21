@@ -4,11 +4,11 @@
 \name{rgeomex-package}
 \alias{rgeomex}
 \alias{rgeomex-package}
-\title{rgeomex: The rgeomex provides the polygon data of INEGI 2019 and INE 2020}
+\title{rgeomex: Geographic Boundaries of Mexico from INEGI and INE}
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-the rgeomex package provides spatial dataset (areal data) available and published homepage of INE and INEGI.
+Polygons of Mexico from INEGI 2019 and INE 2020 at several resolutions (states, municipalities, localities, urban AGEB, blocks and electoral sections), and functions to extract the AGEB, blocks and sections of a locality. The datasets are GeoParquet files that are downloaded the first time they are used and kept in a local cache.
 }
 \seealso{
 Useful links:
@@ -20,17 +20,15 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com} (\href{https://orcid.org/orcid.org/0000-0002-2085-9141}{ORCID})
+\strong{Maintainer}: Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com} (\href{https://orcid.org/0000-0002-2085-9141}{ORCID})
 
 Authors:
 \itemize{
-  \item Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com} (\href{https://orcid.org/orcid.org/0000-0002-2085-9141}{ORCID})
-  \item Emmanuel Morales García \email{emmorales@uv.mx} (\href{https://orcid.org/orcid.org/0000-0002-2085-9141}{ORCID})
-}
-
-Other contributors:
-\itemize{
-  \item Fabian Correa Morales \email{fabiancorrea@msn.com} (\href{https://orcid.org/orcid.org/0000-0002-6193-1242}{ORCID}) [contributor]
+  \item Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com} (\href{https://orcid.org/0000-0002-2085-9141}{ORCID})
+  \item Fabian Correa-Morales \email{fabiancorrea@msn.com} (\href{https://orcid.org/0000-0002-6193-1242}{ORCID})
+  \item Emmanuel Morales García \email{emmorales@uv.mx} (\href{https://orcid.org/0000-0002-6837-9227}{ORCID})
+  \item Cecilia Cruz López \email{ceccruz@uv.mx} (\href{https://orcid.org/0000-0002-9156-5669}{ORCID})
+  \item Héctor Gómez-Dantés \email{hector.gomez@insp.mx} (\href{https://orcid.org/0000-0002-2025-3641}{ORCID})
 }
 
 }

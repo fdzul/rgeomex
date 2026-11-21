@@ -13,7 +13,8 @@
 #'
 #' @details Uses the generalized Levenshtein distance. For more information type \code{?utils::adist} in the console. the original source is https://github.com/davidsjoberg/similiars/blob/master/R/similiars.R
 #'
-#' @examples 1+1
+#' @examples
+#' find_most_similar_string("merida", c("Merida", "Mexicali", "Monterrey"))
 #'
 #'
 #' @return a character vector

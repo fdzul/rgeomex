@@ -7,16 +7,16 @@
 \format{
 A sf object with 80202 rows and 10 variables:
 \describe{
-  \item{OBJECTID}{the ids.}
-  \item{CVEGEO}{the string key. The key included the CVE_ENT, CVE_MUN, CVE_LOC and CVE_AGEB}
-  \item{CVE_ENT}{is the string key for each state.}
-  \item{CVE_MUN}{is the string key to the Municipality.}
-  \item{CVE_LOC}{is string the key of locality.}
-  \item{CVE_AGEB}{is the string key of AGEB.}
-  \item{Ambito}{is a binary variable with two values, Urbana and Rural. The dataset is inly AGEB Urban}
-  \item{Shape_Leng}{is the length of polygon}
-  \item{geometry}{simple feature.}
-  ...
+\item{OBJECTID}{the ids.}
+\item{CVEGEO}{the string key. The key included the CVE_ENT, CVE_MUN, CVE_LOC and CVE_AGEB}
+\item{CVE_ENT}{is the string key for each state.}
+\item{CVE_MUN}{is the string key to the Municipality.}
+\item{CVE_LOC}{is string the key of locality.}
+\item{CVE_AGEB}{is the string key of AGEB.}
+\item{Ambito}{is a binary variable with two values, Urbana and Rural. The dataset is inly AGEB Urban}
+\item{Shape_Leng}{is the length of polygon}
+\item{geometry}{simple feature.}
+...
 }
 }
 \source{
@@ -30,5 +30,8 @@ A spatial dataset containing of polygon data of AGEBs from México
 }
 \details{
 AGEB (Areas GeoEstadisticas Basicas) is stand for basic geostatistical areas. This datasets were published in september 2019.
+}
+\note{
+Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see \code{\link[=rgeomex_load]{rgeomex_load()}}.
 }
 \keyword{datasets}

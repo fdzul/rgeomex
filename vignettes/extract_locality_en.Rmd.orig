@@ -1,0 +1,72 @@
+---
+title: "Extract localities"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Extract localities}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<!-- This file is generated from extract_locality_en.Rmd.orig (see vignettes/precompile.R) -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.path = "figures/extract_locality_en-",
+                      fig.width = 7, fig.height = 5, dpi = 96, out.width = "100%",
+                      message = FALSE, warning = FALSE)
+```
+
+```{r setup}
+library(rgeomex)
+library(ggplot2)
+```
+
+`extract_locality()` extracts the boundary of a locality. It has two arguments: the state key (`cve_edo`) and the name of the locality in INEGI (`locality`). Accents and capital letters do not matter: the most similar name is used. It returns a sf object.
+
+The polygons are downloaded the first time they are used and kept in a local cache (`rgeomex_cache_dir()`); later they are read from the cache.
+
+```{r acapulco}
+acapulco <- extract_locality(cve_edo = "12", locality = "Acapulco de Juarez")
+acapulco
+```
+
+```{r acapulco_map}
+ggplot() +
+  geom_sf(data = acapulco, fill = "#E01A59", col = "white", lwd = 0.05) +
+  theme_void()
+```
+
+The `locality` argument accepts a vector with the localities of a metropolitan area:
+
+```{r guadalajara}
+guadalajara <- extract_locality(cve_edo = "14",
+                                locality = c("Guadalajara", "Zapopan",
+                                             "Tlaquepaque", "Tonalá"))
+guadalajara$NOMGEO
+```
+
+```{r guadalajara_map}
+ggplot() +
+  geom_sf(data = guadalajara, fill = "#E01A59", col = "white", lwd = 0.05) +
+  theme_void()
+```
+
+For Mexico City (`cve_edo = "09"`) all its localities are returned:
+
+```{r cdmx}
+cdmx <- extract_locality(cve_edo = "09", locality = "cdmx")
+nrow(cdmx)
+```
+
+```{r cdmx_map}
+ggplot() +
+  geom_sf(data = cdmx, fill = "#E01A59", col = "white", lwd = 0.05) +
+  theme_void()
+```
+
+The whole datasets are loaded with `rgeomex_load()`; `rgeomex_datasets()` lists them:
+
+```{r datasets}
+rgeomex_datasets()
+yucatan <- rgeomex_load("AGEM_inegi19_mx", cve_edo = "31")
+nrow(yucatan)
+```

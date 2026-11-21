@@ -8,12 +8,12 @@ A spatial dataset containing of polygon data of AGEM from México}
 \format{
 A sf object with 2465 rows and 5 variables:
 \describe{
-  \item{CVEGEO}{the numeric key. The key included the CVE_ENT and the CVE_MUN.}
-  \item{CVE_ENT}{is the numeric key for each state.}
-  \item{CVE_MUN}{is the string key to the Municipality.}
-  \item{NOMGEO}{is a string value. Its the name of municipality.}
-  \item{geometry}{simple feature.}
-  ...
+\item{CVEGEO}{the numeric key. The key included the CVE_ENT and the CVE_MUN.}
+\item{CVE_ENT}{is the numeric key for each state.}
+\item{CVE_MUN}{is the string key to the Municipality.}
+\item{NOMGEO}{is a string value. Its the name of municipality.}
+\item{geometry}{simple feature.}
+...
 }
 }
 \source{
@@ -28,5 +28,8 @@ A spatial dataset containing of polygon data of AGEM from México
 }
 \details{
 AGEM (Areas GeoEstadisticas Municipales) is stand for Municipality Geostatistical Areas. This datasets were update 2025.
+}
+\note{
+Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see \code{\link[=rgeomex_load]{rgeomex_load()}}.
 }
 \keyword{datasets}

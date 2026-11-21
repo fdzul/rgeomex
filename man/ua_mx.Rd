@@ -7,9 +7,9 @@
 \format{
 A sf object with 658 rows and 2 variables:
 \describe{
-  \item{id}{the ids.}
-  \item{geometry}{geometry column}
-  ...
+\item{id}{the ids.}
+\item{geometry}{geometry column}
+...
 }
 }
 \source{
@@ -23,5 +23,8 @@ Urban Areas of Mexico
 }
 \details{
 La base de las area urbana de mexico derivada de la base de las areas global urbanas de meta data for goof of facebook
+}
+\note{
+Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see \code{\link[=rgeomex_load]{rgeomex_load()}}.
 }
 \keyword{datasets}

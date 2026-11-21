@@ -1,1 +1,1 @@
-utils::globalVariables(c("CVE_ENT", "NOMGEO", ".data"))
+utils::globalVariables(c("string_distance", "string", ".data"))

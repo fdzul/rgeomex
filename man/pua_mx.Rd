@@ -7,10 +7,10 @@
 \format{
 A sf object with 111 rows and 3 variables:
 \describe{
-  \item{id}{the ids.}
-  \item{loc}{name of the priority urban area}
-  \item{geometry}{geometry column}
-  ...
+\item{id}{the ids.}
+\item{loc}{name of the priority urban area}
+\item{geometry}{geometry column}
+...
 }
 }
 \source{
@@ -24,5 +24,8 @@ Priority Urban Areas of Mexico
 }
 \details{
 This database was built using data from high-risk locations, called hrl_mx in rgeomex
+}
+\note{
+Downloaded from the GeoParquet release of rgeomex-py the first time it is used; see \code{\link[=rgeomex_load]{rgeomex_load()}}.
 }
 \keyword{datasets}

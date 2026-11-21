@@ -1,92 +1,107 @@
 ---
-title: "extract_sectors_es"
+title: "Extraer secciones electorales"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{extract_sectors_es}
+  %\VignetteIndexEntry{Extraer secciones electorales}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
-```{r, include = FALSE}
-mapview::mapviewOptions(leafletWidth = 700, 
-                        leafletHeight = 300)
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>"
-)
-```
+<!-- Este archivo se genera desde extract_sectors_es.Rmd.orig (ver vignettes/precompile.R) -->
 
-```{r setup, warning=FALSE, message=FALSE, error=FALSE}
+
+
+
+```r
 library(rgeomex)
+library(ggplot2)
+```
+
+`extract_sectores()` extrae las secciones electorales que intersectan el polígono de una localidad. Tiene dos argumentos: la clave del estado (`cve_edo`) y el nombre de la localidad (`locality`). Regresa una lista con dos objetos sf: `locality` (el polígono de la localidad) y `sectores`.
+
+Solo se descarga el archivo del estado que se pide.
+
+## Mérida
+
+
+```r
+merida <- extract_sectores(cve_edo = "31", locality = "Merida")
+nrow(merida$sectores)
+#> [1] 465
 ```
 
 
-Para extraer los sectores de una localidad urbana de interés se usa la función función **extract_sectores** ó puede extraerse con unas líneas  de código. La función **extract_sectores** tiene dos argumentos, uno para definir la clave del estado (cve_edo) y el otro para definir el nombre de la localidad de acuerdo al INEGI 2020 (locality). La función regresa una lista con dos elementos, un elemento corresponde a la localidad (locality) y el otro elemento corresponde a las manzanas.
-
-
-## Ejemplo de Guadalajara con la función **extract_sectores** 
-
-```{r sectores_guadalajara}
-x <- rgeomex::extract_sectores(cve_edo = "14", 
-                             locality = c("Guadalajara", "Zapopan",
-                                          "Tonalá", "Tlaquepaque"))
-mapview::mapview(x$sectores, legend = FALSE, col.regions = "#E01A59")
+```r
+ggplot() +
+  geom_sf(data = merida$sectores, fill = "#E01A59", col = "white", lwd = 0.05) +
+  geom_sf(data = merida$locality, fill = NA, col = "black", lwd = 0.3) +
+  theme_void()
 ```
 
-## Ejemplo de Guadalajara con **código** 
+<div class="figure">
+<img src="figures/extract_sectors_es-merida_map-1.png" alt="plot of chunk merida_map" width="100%" />
+<p class="caption">plot of chunk merida_map</p>
+</div>
+
+## Guadalajara
 
 
-```{r sectores_guadalajara_code}
-# Step 1. load the locality
-locality <- rgeomex::extract_locality(cve_edo = "14",
-                                         locality = c("Guadalajara", "Zapopan",
-                                          "Tonalá", "Tlaquepaque"))
+```r
+gdl <- extract_sectores(cve_edo = "14",
+                  locality = c("Guadalajara", "Zapopan", "Tonalá", "Tlaquepaque"))
+nrow(gdl$sectores)
+#> [1] 1696
+```
 
-# Step 2. load the blocks
-sectores <- rgeomex::sectores_ine20_mx_b |>
+
+```r
+ggplot() +
+  geom_sf(data = gdl$sectores, fill = "#E01A59", col = "white", lwd = 0.05) +
+  geom_sf(data = gdl$locality, fill = NA, col = "black", lwd = 0.3) +
+  theme_void()
+```
+
+<div class="figure">
+<img src="figures/extract_sectors_es-guadalajara_map-1.png" alt="plot of chunk guadalajara_map" width="100%" />
+<p class="caption">plot of chunk guadalajara_map</p>
+</div>
+
+## Ciudad de México
+
+
+```r
+cdmx <- extract_sectores(cve_edo = "09", locality = "cdmx")
+nrow(cdmx$sectores)
+#> [1] 5536
+```
+
+
+```r
+ggplot() +
+  geom_sf(data = cdmx$sectores, fill = "#E01A59", col = "white", lwd = 0.05) +
+  theme_void()
+```
+
+<div class="figure">
+<img src="figures/extract_sectors_es-cdmx_map-1.png" alt="plot of chunk cdmx_map" width="100%" />
+<p class="caption">plot of chunk cdmx_map</p>
+</div>
+
+## Con código
+
+Los mismos pasos que hace la función:
+
+
+```r
+# 1. la localidad
+loc <- extract_locality(cve_edo = "31", locality = "Merida")
+
+# 2. la base del estado
+x <- rgeomex_load("sectores_ine20_mx", cve_edo = "31") |>
   sf::st_make_valid()
 
-# Step 3. extract the blocks of locality
-sectores_locality <- sectores[locality,]
-
-
-# Step 4. check the step 3.
-mapview::mapview(sectores_locality, 
-                 legend = FALSE, 
-                 col.regions = "#E01A59")
+# 3. lo que intersecta la localidad
+x <- x[loc, ]
+nrow(x)
+#> [1] 465
 ```
-
-
-## Ejemplo de la Ciudad de México con la función **extract_sectores** 
-
-```{r sectores_cdmx}
-# Step 1. extract the blocks of locality
-x <- rgeomex::extract_sectores(cve_edo = "09", 
-                               locality = "cdmx")
-# Step 4. check the step 1.
-mapview::mapview(x$sectores, 
-                 legend = FALSE, 
-                 col.regions = "#E01A59")
-```
-
-
-## Ejemplo de la Ciudad de México con **código** 
-
-```{r sectores_cdmx_code}
-# Step 1. load the locality
-locality <- rgeomex::loc_inegi19_mx |>
-    dplyr::filter(CVE_ENT == "09") 
-
-# Step 2. load the blocks
-sectores <- rgeomex::sectores_ine20_mx_a |>
-  sf::st_make_valid()
-
-# Step 3. extract the blocks of locality
-sectores_locality <- sectores[locality, ]
-
-# Step 4. check the step 3.
-mapview::mapview(sectores_locality,legend = FALSE, 
-                 col.regions = "#E01A59")
-```
-
-

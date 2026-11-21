@@ -1,0 +1,72 @@
+---
+title: "Extraer localidades"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Extraer localidades}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+<!-- Este archivo se genera desde extract_locality_es.Rmd.orig (ver vignettes/precompile.R) -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(collapse = TRUE, comment = "#>", fig.path = "figures/extract_locality_es-",
+                      fig.width = 7, fig.height = 5, dpi = 96, out.width = "100%",
+                      message = FALSE, warning = FALSE)
+```
+
+```{r setup}
+library(rgeomex)
+library(ggplot2)
+```
+
+Para extraer una localidad se usa `extract_locality()`, con dos argumentos: la clave del estado (`cve_edo`) y el nombre de la localidad según el INEGI (`locality`). No importan los acentos ni las mayúsculas: se usa el nombre más parecido. La función regresa un objeto sf.
+
+Los polígonos se descargan la primera vez que se usan y se guardan en un caché local (`rgeomex_cache_dir()`); las siguientes veces se leen del caché.
+
+```{r acapulco}
+acapulco <- extract_locality(cve_edo = "12", locality = "Acapulco de Juarez")
+acapulco
+```
+
+```{r acapulco_map}
+ggplot() +
+  geom_sf(data = acapulco, fill = "#E01A59", col = "white", lwd = 0.05) +
+  theme_void()
+```
+
+El argumento `locality` acepta un vector con las localidades de una zona metropolitana:
+
+```{r guadalajara}
+guadalajara <- extract_locality(cve_edo = "14",
+                                locality = c("Guadalajara", "Zapopan",
+                                             "Tlaquepaque", "Tonalá"))
+guadalajara$NOMGEO
+```
+
+```{r guadalajara_map}
+ggplot() +
+  geom_sf(data = guadalajara, fill = "#E01A59", col = "white", lwd = 0.05) +
+  theme_void()
+```
+
+Para la Ciudad de México (`cve_edo = "09"`) se regresan todas sus localidades:
+
+```{r cdmx}
+cdmx <- extract_locality(cve_edo = "09", locality = "cdmx")
+nrow(cdmx)
+```
+
+```{r cdmx_map}
+ggplot() +
+  geom_sf(data = cdmx, fill = "#E01A59", col = "white", lwd = 0.05) +
+  theme_void()
+```
+
+Las bases completas se cargan con `rgeomex_load()`; `rgeomex_datasets()` lista las disponibles:
+
+```{r datasets}
+rgeomex_datasets()
+yucatan <- rgeomex_load("AGEM_inegi19_mx", cve_edo = "31")
+nrow(yucatan)
+```
