@@ -1,93 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/404.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/articles/extract_agebs_es.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/articles/extract_blocks_es.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/articles/extract_locality_es.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/articles/extract_sectors_es.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/index.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/AGEB_inegi_2019_a.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/AGEB_inegi_2019_b.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/AGEE_inegi19_mx.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/AGEM_inegi19_mx.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_a.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_b.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_c.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_centroid.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_d.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_e.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/extract_ageb.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/extract_blocks.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/extract_locality.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/extract_sectores.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/find_most_similar_string.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/loc_inegi19_mx.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/sectores_ine20_mx_a.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/sectores_ine20_mx_b.html</loc>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/rgeomex/reference/sectores_ine20_mx_c.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://fdzul.github.io/rgeomex/404.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/LICENSE-text.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/LICENSE.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/README.es.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/articles/extract_ageb_en.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/articles/extract_ageb_es.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/articles/extract_blocks_en.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/articles/extract_blocks_es.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/articles/extract_locality_en.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/articles/extract_locality_es.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/articles/extract_sectors_en.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/articles/extract_sectors_es.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/articles/index.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/authors.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/index.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/news/index.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/AGEB_inegi_2019_a.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/AGEB_inegi_2019_b.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/AGEE_inegi19_mx.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/AGEM_inegi19_mx.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/AGEM_inegi25_mx.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_a.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_b.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_c.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_centroid.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_d.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/blocks_ine20_mx_e.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/extract_ageb.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/extract_blocks.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/extract_locality.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/extract_sectores.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/find_most_similar_string.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/hrl_mx.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/index.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/iter_2020_loc.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/loc_inegi19_mx.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/pua_mx.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/rgeomex-package.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/rgeomex_cache_dir.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/rgeomex_clear_cache.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/rgeomex_datasets.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/rgeomex_load.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/sectores_ine20_mx_a.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/sectores_ine20_mx_b.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/sectores_ine20_mx_c.html</loc></url>
+<url><loc>https://fdzul.github.io/rgeomex/reference/ua_mx.html</loc></url>
 </urlset>
+
