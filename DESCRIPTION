@@ -14,11 +14,10 @@ Authors@R: c(
     person("Héctor", "Gómez-Dantés", , "hector.gomez@insp.mx", role = "aut",
            comment = c(ORCID = "0000-0002-2025-3641"))
   )
-Description: Polygons of Mexico from INEGI 2019 and INE 2020 at several
-    resolutions (states, municipalities, localities, urban AGEB, blocks and
-    electoral sections), and functions to extract the AGEB, blocks and
-    sections of a locality. The datasets are GeoParquet files that are
-    downloaded the first time they are used and kept in a local cache.
+Description: Geographic boundaries of Mexico (states, municipalities,
+    localities, AGEB, blocks and electoral sections) from INEGI 2019 and
+    INE 2020, and functions to extract the AGEB, blocks and electoral
+    sections of a locality.
 License: MIT + file LICENSE
 URL: https://github.com/fdzul/rgeomex, https://fdzul.github.io/rgeomex/
 BugReports: https://github.com/fdzul/rgeomex/issues
