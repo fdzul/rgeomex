@@ -35,8 +35,6 @@ Felipe Antonio Dzul Manzanilla <felipe.dzul.m@gmail.com>.
 ``` r
 # \donttest{
 x <- extract_ageb(cve_edo = "31", locality = "Merida")
-#> Downloading loc_inegi19_mx.parquet (first use only)
-#> Downloading AGEB_inegi_2019_31.parquet (first use only)
 plot(sf::st_geometry(x$ageb))
 
 # }

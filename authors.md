@@ -20,7 +20,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/fdzul/rgeomex/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/fdzul/rgeomex/blob/HEAD/DESCRIPTION)
 
 Dzul Manzanilla F, Correa-Morales F, Morales García E, Cruz López C,
 Gómez-Dantés H (2026). *rgeomex: Geographic Boundaries of Mexico from
