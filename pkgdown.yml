@@ -1,4 +1,4 @@
-pandoc: '3.10'
+pandoc: 3.8.3
 pkgdown: 2.2.1
 pkgdown_sha: ~
 articles:
@@ -10,7 +10,7 @@ articles:
   extract_locality_es: extract_locality_es.html
   extract_sectors_en: extract_sectors_en.html
   extract_sectors_es: extract_sectors_es.html
-last_built: 2026-11-21T16:02Z
+last_built: 2026-11-21T18:13Z
 urls:
   reference: https://fdzul.github.io/rgeomex/reference
   article: https://fdzul.github.io/rgeomex/articles

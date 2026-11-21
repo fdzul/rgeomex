@@ -21,5 +21,5 @@ the path of the folder.
 
 ``` r
 rgeomex_cache_dir()
-#> [1] "/Users/fdzul/Library/Caches/org.R-project.R/R/rgeomex"
+#> [1] "/home/runner/.cache/R/rgeomex"
 ```

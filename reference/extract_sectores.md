@@ -35,6 +35,7 @@ Felipe Antonio Dzul Manzanilla <felipe.dzul.m@gmail.com>.
 ``` r
 # \donttest{
 x <- extract_sectores(cve_edo = "31", locality = "Merida")
+#> Downloading sectores_ine20_mx_31.parquet (first use only)
 plot(sf::st_geometry(x$sectores))
 
 # }

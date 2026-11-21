@@ -40,6 +40,7 @@ Felipe Antonio Dzul Manzanilla <felipe.dzul.m@gmail.com>.
 ``` r
 # \donttest{
 yuc <- rgeomex_load("AGEM_inegi19_mx", cve_edo = "31")
+#> Downloading AGEM_inegi19_mx.parquet (first use only)
 blocks <- rgeomex_load("blocks_ine20_mx", cve_edo = "31")
 # }
 ```
