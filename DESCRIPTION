@@ -5,7 +5,7 @@ Version: 0.2.0
 Authors@R: c(
     person("Felipe Antonio", "Dzul Manzanilla", , "felipe.dzul.m@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-2085-9141")),
-    person("Fabian", "Correa-Morales", , "fabiancorrea@msn.com", role = "aut",
+    person("Fabián", "Correa-Morales", , "fabiancorrea@msn.com", role = "aut",
            comment = c(ORCID = "0000-0002-6193-1242")),
     person("Emmanuel", "Morales García", , "emmorales@uv.mx", role = "aut",
            comment = c(ORCID = "0000-0002-6837-9227")),
