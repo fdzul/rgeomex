@@ -43,10 +43,7 @@ ggplot() +
   theme_void()
 ```
 
-<div class="figure">
-<img src="figures/extract_locality_es-acapulco_map-1.png" alt="plot of chunk acapulco_map" width="100%" />
-<p class="caption">plot of chunk acapulco_map</p>
-</div>
+<img src="figures/extract_locality_es-acapulco_map-1.png" alt="acapulco_map" width="100%" />
 
 El argumento `locality` acepta un vector con las localidades de una zona metropolitana:
 
@@ -66,10 +63,7 @@ ggplot() +
   theme_void()
 ```
 
-<div class="figure">
-<img src="figures/extract_locality_es-guadalajara_map-1.png" alt="plot of chunk guadalajara_map" width="100%" />
-<p class="caption">plot of chunk guadalajara_map</p>
-</div>
+<img src="figures/extract_locality_es-guadalajara_map-1.png" alt="guadalajara_map" width="100%" />
 
 Para la Ciudad de México (`cve_edo = "09"`) se regresan todas sus localidades:
 
@@ -87,10 +81,7 @@ ggplot() +
   theme_void()
 ```
 
-<div class="figure">
-<img src="figures/extract_locality_es-cdmx_map-1.png" alt="plot of chunk cdmx_map" width="100%" />
-<p class="caption">plot of chunk cdmx_map</p>
-</div>
+<img src="figures/extract_locality_es-cdmx_map-1.png" alt="cdmx_map" width="100%" />
 
 Las bases completas se cargan con `rgeomex_load()`; `rgeomex_datasets()` lista las disponibles:
 
