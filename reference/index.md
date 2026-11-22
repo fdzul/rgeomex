@@ -39,13 +39,13 @@
   : Polygons of blocks from México of the National Electoral Institute
   2020
 - [`extract_ageb()`](https://fdzul.github.io/rgeomex/reference/extract_ageb.md)
-  : Extract the AGEB of a locality
+  : Extract the AGEB of one or several localities
 - [`extract_blocks()`](https://fdzul.github.io/rgeomex/reference/extract_blocks.md)
-  : Extract the blocks of a locality
+  : Extract the blocks of one or several localities
 - [`extract_locality()`](https://fdzul.github.io/rgeomex/reference/extract_locality.md)
-  : Extract the boundary of a locality
+  : Extract the boundary of one or several localities
 - [`extract_sectores()`](https://fdzul.github.io/rgeomex/reference/extract_sectores.md)
-  : Extract the electoral sections of a locality
+  : Extract the electoral sections of one or several localities
 - [`find_most_similar_string()`](https://fdzul.github.io/rgeomex/reference/find_most_similar_string.md)
   : find_most_similar_string
 - [`hrl_mx`](https://fdzul.github.io/rgeomex/reference/hrl_mx.md) :
