@@ -2,26 +2,33 @@
 % Please edit documentation in R/extract_locality.R
 \name{extract_locality}
 \alias{extract_locality}
-\title{Extract the boundary of a locality}
+\title{Extract the boundary of one or several localities}
 \usage{
 extract_locality(cve_edo, locality)
 }
 \arguments{
 \item{cve_edo}{INEGI key of the state, from \code{"01"} to \code{"32"}.}
 
-\item{locality}{name of the locality (INEGI 2019); the most similar name is
-used, so accents and capital letters do not matter. For Mexico City
+\item{locality}{name of the locality (INEGI 2019), or a vector of names
+for several localities, e.g. a metropolitan area. The most similar name
+is used, so accents and capital letters do not matter. For Mexico City
 (\code{cve_edo = "09"}) the whole city is returned.}
 }
 \value{
-a sf object with the boundary of the locality.
+a sf object with the boundary of the locality (one row per
+locality).
 }
 \description{
-Extract the boundary of a locality
+Extract the boundary of one or several localities
 }
 \examples{
 \donttest{
 merida <- extract_locality(cve_edo = "31", locality = "Merida")
+
+# metropolitan area of Guadalajara
+gdl <- extract_locality(cve_edo = "14",
+                        locality = c("Guadalajara", "Zapopan",
+                                     "Tonala", "Tlaquepaque"))
 }
 }
 \author{

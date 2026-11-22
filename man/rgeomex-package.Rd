@@ -8,7 +8,7 @@
 \description{
 \if{html}{\figure{logo.png}{options: style='float: right' alt='logo' width='120'}}
 
-Polygons of Mexico from INEGI 2019 and INE 2020 at several resolutions (states, municipalities, localities, urban AGEB, blocks and electoral sections), and functions to extract the AGEB, blocks and sections of a locality. The datasets are GeoParquet files that are downloaded the first time they are used and kept in a local cache.
+Geographic boundaries of Mexico (states, municipalities, localities, AGEB, blocks and electoral sections) from INEGI 2019 and INE 2020, and functions to extract the AGEB, blocks and electoral sections of a locality.
 }
 \seealso{
 Useful links:
@@ -25,7 +25,7 @@ Useful links:
 Authors:
 \itemize{
   \item Felipe Antonio Dzul Manzanilla \email{felipe.dzul.m@gmail.com} (\href{https://orcid.org/0000-0002-2085-9141}{ORCID})
-  \item Fabian Correa-Morales \email{fabiancorrea@msn.com} (\href{https://orcid.org/0000-0002-6193-1242}{ORCID})
+  \item Fabián Correa-Morales \email{fabiancorrea@msn.com} (\href{https://orcid.org/0000-0002-6193-1242}{ORCID})
   \item Emmanuel Morales García \email{emmorales@uv.mx} (\href{https://orcid.org/0000-0002-6837-9227}{ORCID})
   \item Cecilia Cruz López \email{ceccruz@uv.mx} (\href{https://orcid.org/0000-0002-9156-5669}{ORCID})
   \item Héctor Gómez-Dantés \email{hector.gomez@insp.mx} (\href{https://orcid.org/0000-0002-2025-3641}{ORCID})

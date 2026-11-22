@@ -2,29 +2,34 @@
 % Please edit documentation in R/extract_blocks.R
 \name{extract_blocks}
 \alias{extract_blocks}
-\title{Extract the blocks of a locality}
+\title{Extract the blocks of one or several localities}
 \usage{
 extract_blocks(locality, cve_edo)
 }
 \arguments{
-\item{locality}{name of the locality (INEGI 2019); the most similar name is
-used, so accents and capital letters do not matter. For Mexico City
+\item{locality}{name of the locality (INEGI 2019), or a vector of names
+for several localities, e.g. a metropolitan area. The most similar name
+is used, so accents and capital letters do not matter. For Mexico City
 (\code{cve_edo = "09"}) the whole city is returned.}
 
 \item{cve_edo}{INEGI key of the state, from \code{"01"} to \code{"32"}.}
 }
 \value{
 a list with two sf objects: \code{locality} (the boundary of the
-locality) and \code{block} (its blocks).
+localities) and \code{block} (its blocks).
 }
 \description{
-Extracts the blocks (manzanas, INE 2020) that intersect the boundary of a
-locality.
+Extracts the blocks (manzanas, INE 2020) that intersect the boundary of one or
+several localities.
 }
 \examples{
 \donttest{
 x <- extract_blocks(cve_edo = "31", locality = "Merida")
 plot(sf::st_geometry(x$block))
+
+# several localities: metropolitan area of Guadalajara
+gdl <- extract_blocks(cve_edo = "14",
+    locality = c("Guadalajara", "Zapopan", "Tonala", "Tlaquepaque"))
 }
 }
 \author{
