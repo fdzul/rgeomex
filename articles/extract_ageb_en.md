@@ -31,9 +31,7 @@ ggplot() +
   theme_void()
 ```
 
-![plot of chunk merida_map](figures/extract_ageb_en-merida_map-1.png)
-
-plot of chunk merida_map
+![merida_map](figures/extract_ageb_en-merida_map-1.png)
 
 ## Guadalajara
 
@@ -53,10 +51,7 @@ ggplot() +
   theme_void()
 ```
 
-![plot of chunk
-guadalajara_map](figures/extract_ageb_en-guadalajara_map-1.png)
-
-plot of chunk guadalajara_map
+![guadalajara_map](figures/extract_ageb_en-guadalajara_map-1.png)
 
 ## Mexico City
 
@@ -74,9 +69,7 @@ ggplot() +
   theme_void()
 ```
 
-![plot of chunk cdmx_map](figures/extract_ageb_en-cdmx_map-1.png)
-
-plot of chunk cdmx_map
+![cdmx_map](figures/extract_ageb_en-cdmx_map-1.png)
 
 ## Step by step
 

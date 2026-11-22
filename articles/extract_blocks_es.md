@@ -31,9 +31,7 @@ ggplot() +
   theme_void()
 ```
 
-![plot of chunk merida_map](figures/extract_blocks_es-merida_map-1.png)
-
-plot of chunk merida_map
+![merida_map](figures/extract_blocks_es-merida_map-1.png)
 
 ## Guadalajara
 
@@ -53,10 +51,7 @@ ggplot() +
   theme_void()
 ```
 
-![plot of chunk
-guadalajara_map](figures/extract_blocks_es-guadalajara_map-1.png)
-
-plot of chunk guadalajara_map
+![guadalajara_map](figures/extract_blocks_es-guadalajara_map-1.png)
 
 ## Ciudad de México
 
@@ -74,9 +69,7 @@ ggplot() +
   theme_void()
 ```
 
-![plot of chunk cdmx_map](figures/extract_blocks_es-cdmx_map-1.png)
-
-plot of chunk cdmx_map
+![cdmx_map](figures/extract_blocks_es-cdmx_map-1.png)
 
 ## Con código
 

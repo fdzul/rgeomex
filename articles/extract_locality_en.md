@@ -39,10 +39,7 @@ ggplot() +
   theme_void()
 ```
 
-![plot of chunk
-acapulco_map](figures/extract_locality_en-acapulco_map-1.png)
-
-plot of chunk acapulco_map
+![acapulco_map](figures/extract_locality_en-acapulco_map-1.png)
 
 The `locality` argument accepts a vector with the localities of a
 metropolitan area:
@@ -63,10 +60,7 @@ ggplot() +
   theme_void()
 ```
 
-![plot of chunk
-guadalajara_map](figures/extract_locality_en-guadalajara_map-1.png)
-
-plot of chunk guadalajara_map
+![guadalajara_map](figures/extract_locality_en-guadalajara_map-1.png)
 
 For Mexico City (`cve_edo = "09"`) all its localities are returned:
 
@@ -84,9 +78,7 @@ ggplot() +
   theme_void()
 ```
 
-![plot of chunk cdmx_map](figures/extract_locality_en-cdmx_map-1.png)
-
-plot of chunk cdmx_map
+![cdmx_map](figures/extract_locality_en-cdmx_map-1.png)
 
 The whole datasets are loaded with
 [`rgeomex_load()`](https://fdzul.github.io/rgeomex/reference/rgeomex_load.md);
